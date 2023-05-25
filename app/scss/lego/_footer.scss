@@ -125,7 +125,9 @@
   }
 
   &__link {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: fill 0.4s;
 
     &:hover {
