@@ -46,9 +46,33 @@
   }
 
   .focus {
+    transition: outline 0.4s;
     &:focus {
       outline: solid 1px $secondary;
       border-radius: 4px;
     }
-
   }
+
+  .focus-white {
+    transition: outline 0.4s;
+
+    &:focus {
+      outline: solid 1px $light;
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+  }
+
+  .int {
+    transition: color 0.4s;
+
+    &:hover {
+      color: $accent;
+    }
+
+    &:active {
+      color: $primary;
+    }
+  }
+
+  
