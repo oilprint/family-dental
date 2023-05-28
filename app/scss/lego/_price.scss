@@ -1,0 +1,19 @@
+.price {
+  &__container {
+    text-align: center;
+    padding: 100px 200px;
+    background-color: $secondary;
+  }
+
+  &__title {
+    font-size: 36px;
+    text-transform: uppercase;
+    color: $light;
+    margin-bottom: 20px;
+  }
+
+  &__txt {
+    color: $light;
+    margin-bottom: 40px;
+  }
+}
