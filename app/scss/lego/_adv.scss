@@ -1,0 +1,63 @@
+.adv {
+  &__section {
+    padding-top: 50px;
+  }
+
+  &__blockquote {
+    padding: 0 200px;
+    margin-bottom: 50px;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+    color: $secondary;
+    text-align: center;
+  }
+
+  &__feature {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    padding: 30px;
+    background-color: $bg-dark;
+    width: calc((100% - 2 * 30px) / 3);
+  }
+
+  &__title {
+    font-size: 20px;
+    color: $secondary;
+    margin-bottom: 20px;
+    padding-left: 80px;
+    text-transform: uppercase;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 60px;
+      height: 60px;
+      left: 0;
+      top: 0;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+
+    &--effect::before {
+      background-image: url('../images/icons/plus.svg');
+    }
+
+    &--prof::before {
+      background-image: url('../images/icons/hand.svg');
+    }
+
+    &--comf::before {
+      background-image: url('../images/icons/magicglass.svg');
+    }
+  }
+
+  &__txt {
+    font-size: 15px;
+  }
+}

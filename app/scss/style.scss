@@ -1,13 +1,16 @@
-@import 'fonts';
-@import 'reset';
+
+@import 'global/reset';
 @import 'libs';
 
 @import 'vars';
-@import 'global';
+@import 'global/global';
+@import 'global/ints';
+
 
 @import 'lego/header'; 
 @import 'lego/hero'; 
+@import 'lego/adv'; 
 @import 'lego/footer'; 
-@import 'lego/botton'; 
+
 
 

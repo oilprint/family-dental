@@ -15,9 +15,6 @@
 
   }
 
-
-
-
   &__title {
     max-width: 670px;
     font-size: 48px;
@@ -32,6 +29,36 @@
     margin-bottom: 54px;
   }
 
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+
+    li {
+      &:not(:last-child) {
+        padding-right: 16px;
+      }
+      button {
+        padding: 0;
+        border-color: transparent;
+        font-size: 0;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: $secondary;
+
+      }
+
+      &.slick-active {
+        button {
+          border-color: $accent;
+          background-color: $accent;
+
+        }
+        
 
 
+      }
+    }
+  }
 }
+

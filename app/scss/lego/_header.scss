@@ -1,18 +1,13 @@
 .header {
   padding: 20px 0;
   background-color: $light;
-
-  &__inner {
-    display: flex;
-    justify-content: space-between;
-  }
-
+  
   &__links {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 800px;
-    width: 100%;
+    flex-grow: 1;
+    margin-right: 90px;
   }
 
   &__menu {
@@ -51,7 +46,6 @@
     color: $secondary;
     font-weight: 500;
     font-feature-settings: 'pnum'on, 'lnum'on;
-
   }
 
   &__address {
@@ -62,7 +56,5 @@
   &__phone {
     font-size: 32px;
     font-weight: 500;
-
-
   }
 }
