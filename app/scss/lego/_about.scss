@@ -1,0 +1,43 @@
+.about {
+  &__inner {
+    display: flex;
+    justify-content: flex-end;
+    background-repeat: no-repeat;
+    background-size: 49% auto;
+    background-position: left top; 
+  }
+
+  &__content {
+    max-width: 535px;
+    width: 100%;
+    padding-bottom: 16vh;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+
+  }
+
+  &__item {
+    padding-left: 27px;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 6px;
+      left: 0;
+      width: 12px;
+      height: 12px;
+      background-image: url('../images/icons/bullet.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+
+}
