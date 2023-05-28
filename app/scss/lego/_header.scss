@@ -1,6 +1,10 @@
 .header {
   padding: 20px 0;
   background-color: $light;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
   
   &__links {
     display: flex;

@@ -22,6 +22,9 @@
     padding: 30px;
     background-color: $bg-dark;
     width: calc((100% - 2 * 30px) / 3);
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 
   &__title {

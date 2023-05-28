@@ -70,3 +70,22 @@
       color: $primary;
     }
   }
+
+  .title {
+    display: inline-block;
+    font-size: 50px;
+    text-transform: uppercase;
+    color: $secondary;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 115%;
+      height: 1px;
+      background-color: $secondary;
+      bottom: 0;
+      left: 0;
+    }
+
+  }
