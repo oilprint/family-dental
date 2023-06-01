@@ -16,4 +16,10 @@
     color: $light;
     margin-bottom: 40px;
   }
+
+  &__button {
+    &:hover {
+      background-color: $primary;
+    }
+  }
 }

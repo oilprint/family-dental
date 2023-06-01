@@ -1,10 +1,5 @@
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>
-<symbol id="burger" viewBox="0 0 32 32">
-    <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M28 8h-24"></path>
-    <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M28 16h-16"></path>
-    <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M28 24h-18.667"></path>
-</symbol>
 <symbol id="comf" viewBox="0 0 32 32">
   <path d="M25.761 11.751c0-0.345-0.28-0.625-0.625-0.625s-0.625 0.28-0.625 0.625c0 0.431-0.351 0.782-0.782 0.782-0.345 0-0.625 0.28-0.625 0.625s0.28 0.625 0.625 0.625c0.431 0 0.782 0.351 0.782 0.782 0 0.345 0.28 0.625 0.625 0.625s0.625-0.28 0.625-0.625c0-0.431 0.351-0.782 0.782-0.782 0.345 0 0.625-0.28 0.625-0.625s-0.28-0.625-0.625-0.625c-0.431 0-0.782-0.351-0.782-0.782z"></path>
   <path d="M6.316 3.201c0.431 0 0.782 0.351 0.782 0.782 0 0.345 0.28 0.625 0.625 0.625s0.625-0.28 0.625-0.625c0-0.431 0.351-0.782 0.782-0.782 0.345 0 0.625-0.28 0.625-0.625s-0.28-0.625-0.625-0.625c-0.431 0-0.782-0.351-0.782-0.782 0-0.345-0.28-0.625-0.625-0.625s-0.625 0.28-0.625 0.625c0 0.431-0.351 0.782-0.782 0.782-0.345 0-0.625 0.28-0.625 0.625s0.28 0.625 0.625 0.625z"></path>
