@@ -1,13 +1,19 @@
 .review {
-  text-align: center;
+  padding-bottom: 100px;
+
+  &__container {
+    padding: 0;
+  }
 
   &__title {
     margin-bottom: 40px;
+    margin-left: 15px;
   }
 
   &__item {
-    max-width: 370px;
-    width: 100%;
+    text-align: center;
+    width: 370px;
+
     height: 100%;
     border: 1px solid $secondary;
     padding: 30px 15px;
@@ -23,7 +29,6 @@
     font-weight: 500;
     margin-bottom: 25px;
     color: $secondary;
-
   }
 
   &__txt {
@@ -150,5 +155,9 @@
         background-color: $primary;
       }
     }
+  }
+
+  .slick-slide {
+    margin: 0 15px;
   }
 }
