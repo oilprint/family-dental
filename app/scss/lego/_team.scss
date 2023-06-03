@@ -50,10 +50,32 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border: 1px solid rgba($secondary, 0);
+    transition: border-color 0.4s;
+
+    &:focus {
+      border: 1px solid $secondary;
+    }
+
+    &:hover {
+      border: 1px solid $secondary;
+      .team__img {
+        transform: scale(1.2);
+      }
+    }
+
+    &:active {
+      border: 1px solid $accent;
+    }
+  }
+
+  &__img-box {
+    overflow: hidden;
   }
 
   &__img {
     object-fit: cover;
+    transition: transform 2s;
   }
 
   &__bottom {

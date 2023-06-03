@@ -32,22 +32,22 @@
 
           <ul class="header__menu">
             <li class="header__item">
-              <a class="header__link focus" href="">
+              <a class="header__link focus" href="#">
                 о нас
               </a>
             </li>
             <li class="header__item">
-              <a class="header__link focus" href="">
+              <a class="header__link focus" href="#team">
                 наши врачи
               </a>
             </li>
             <li class="header__item">
-              <a class="header__link focus" href="">
+              <a class="header__link focus" href="#price">
                 Цены
               </a>
             </li>
             <li class="header__item">
-              <a class="header__link focus" href="">
+              <a class="header__link focus" href="#contact">
                 Контакты
               </a>
             </li>
@@ -277,7 +277,7 @@
       </div>
     </section>
 
-    <section class="price section">
+    <section class="price section" id="price">
       <div class="container price__container">
         <h2 class="price__title">
           Услуги и цены стоматологии
@@ -292,7 +292,7 @@
       </div>
     </section>
 
-    <section class="team section">
+    <section class="team section" id="team">
       <div class="container">
         <div class="team__inner">
 
@@ -322,9 +322,10 @@
             <li class="team__item">
 
               <button class="team__btn" type="button" data-modal-button="modal-1">
-
-                <img class="team__img" src="images/team/prohorov.jpg" alt="Сергей Прохоров Врач высшей категории"
-                  width="270" height="300">
+                <div class="team__img-box">
+                  <img class="team__img" src="images/team/prohorov.jpg" alt="Сергей Прохоров Врач высшей категории"
+                    width="270" height="300">
+                </div>
                 <div class="team__bottom">
                   <h3 class="team__bottom-title">
                     Сергей Прохоров
@@ -337,54 +338,58 @@
             </li>
 
             <li class="team__item">
-             
-             <button class="team__btn" type="button" data-modal-button="modal-2">
 
-              <img class="team__img" src="images/team/sergeeva.jpg" alt="Екатерина Сергеева Стоматолог-ортодонт"
-                width="270" height="300">
-              <div class="team__bottom">
-                <h3 class="team__bottom-title">
-                  Екатерина Сергеева
-                </h3>
-                Стоматолог-ортодонт
-              </div>
+              <button class="team__btn" type="button" data-modal-button="modal-2">
+                <div class="team__img-box">
+                  <img class="team__img" src="images/team/sergeeva.jpg" alt="Екатерина Сергеева Стоматолог-ортодонт"
+                    width="270" height="300">
+                </div>
+                <div class="team__bottom">
+                  <h3 class="team__bottom-title">
+                    Екатерина Сергеева
+                  </h3>
+                  Стоматолог-ортодонт
+                </div>
               </button>
-             
+
             </li>
 
             <li class="team__item">
               <button class="team__btn" type="button" data-modal-button="modal-3">
-
-              <img class="team__img" src="images/team/ivanov.jpg" alt="Сергей Иванов Врач высшей категории" width="270"
-                height="300">
-              <div class="team__bottom">
-                <h3 class="team__bottom-title">
-                  Сергей Иванов
-                </h3>
-                Стоматолог-терапевт <br>
-                Врач высшей категории
-              </div>
+                <div class="team__img-box">
+                  <img class="team__img" src="images/team/ivanov.jpg" alt="Сергей Иванов Врач высшей категории"
+                    width="270" height="300">
+                </div>
+                <div class="team__bottom">
+                  <h3 class="team__bottom-title">
+                    Сергей Иванов
+                  </h3>
+                  Стоматолог-терапевт <br>
+                  Врач высшей категории
+                </div>
               </button>
             </li>
 
             <li class="team__item">
               <button class="team__btn" type="button" data-modal-button="modal-4">
-
-              <img class="team__img" src="images/team/popova.jpg" alt="Светлана Попова " width="300" height="300">
-              <div class="team__bottom">
-                <h3 class="team__bottom-title">
-                  Светлана Попова
-                </h3>
-                Подростковый стоматолог-терапевт
-              </div>
+                <div class="team__img-box">
+                  <img class="team__img" src="images/team/popova.jpg" alt="Светлана Попова" width="300" height="300">
+                </div>
+                <div class="team__bottom">
+                  <h3 class="team__bottom-title">
+                    Светлана Попова
+                  </h3>
+                  Подростковый стоматолог-терапевт
+                </div>
               </button>
             </li>
 
             <li class="team__item">
               <button class="team__btn" type="button" data-modal-button="modal-5">
-
-                <img class="team__img" src="images/team/ermakova.jpg" alt="Екатерина Ермакова Стоматолог-терапевт"
-                  width="270" height="300">
+                <div class="team__img-box">
+                  <img class="team__img" src="images/team/ermakova.jpg" alt="Екатерина Ермакова Стоматолог-терапевт"
+                    width="270" height="300">
+                </div>
                 <div class="team__bottom">
                   <h3 class="team__bottom-title">
                     Екатерина Ермакова
@@ -396,8 +401,10 @@
 
             <li class="team__item">
               <button class="team__btn" type="button" data-modal-button="modal-6">
-                <img class="team__img" src="images/team/savelev.jpg" alt="Сергей Савельев Стоматолог-хирург" width="300"
-                  height="300">
+                <div class="team__img-box">
+                  <img class="team__img" src="images/team/savelev.jpg" alt="Сергей Савельев Стоматолог-хирург"
+                    width="300" height="300">
+                </div>
                 <div class="team__bottom">
                   <h3 class="team__bottom-title">
                     Сергей Савельев
@@ -408,9 +415,7 @@
             </li>
 
           </ul>
-
         </div>
-
 
         <div class="modals">
 
@@ -462,12 +467,12 @@
                     </li>
                   </ul>
                 </div>
-                <button class="button" type="button">
+                <a class="button" href="#contact">
                   Записаться на прием
-                </button>
+                </a>
               </div>
 
-              <button class="modal__close-btn" type="button" data-modal-close> 
+              <button class="modal__close-btn" type="button" data-modal-close>
                 <svg class="modal__close-btn-icon" width="32" height="32">
                   <use href="./images/symbol-defs.svg#icon-close"></use>
                 </svg>
@@ -476,318 +481,310 @@
 
           </div>
 
-           <div id="modal-2" class="modal hidden" data-modal>
-             <div class="modal__window">
-               <img class="modal__img" src="images/team/sergeeva-2.jpg" width="250" height="400"
-                 alt="Стоматолог-ортодонт Екатерина Сергеева">
+          <div id="modal-2" class="modal hidden" data-modal>
+            <div class="modal__window">
+              <img class="modal__img" src="images/team/sergeeva-2.jpg" width="250" height="400"
+                alt="Стоматолог-ортодонт Екатерина Сергеева">
 
-               <div class="modal__content">
+              <div class="modal__content">
 
-                 <div class="modal__content-top">
-                   <h2 class="modal__title title">
-                     Екатерина Сергеева
-                   </h2>
-                   <div class="modal__subtitle">
-                     <p class="modal__subtitle-txt">
-                       Стоматолог-ортодонт
-                     </p>
-                     <p class="modal__subtitle-txt">
-                       
-                     </p>
-                   </div>
+                <div class="modal__content-top">
+                  <h2 class="modal__title title">
+                    Екатерина Сергеева
+                  </h2>
+                  <div class="modal__subtitle">
+                    <p class="modal__subtitle-txt">
+                      Стоматолог-ортодонт
+                    </p>
+                    <p class="modal__subtitle-txt">
 
-                   <ul class="maodal__info">
-                     <li class="modal__item">
-                       <svg class="modal__icon" width="12" height="12">
-                         <use href="./images/symbol-defs.svg#icon-bullet"></use>
-                       </svg>
-                       лечение нарушений прикуса, а также зубного ряда
-                     </li>
-                     <li class="modal__item">
-                       <svg class="modal__icon" width="12" height="12">
-                         <use href="./images/symbol-defs.svg#icon-bullet"></use>
-                       </svg>
-                       лечение с использованием брекет-систем
-                     </li>
-                     <li class="modal__item">
-                       <svg class="modal__icon" width="12" height="12">
-                         <use href="./images/symbol-defs.svg#icon-bullet"></use>
-                       </svg>
-                       патология зубных рядов, прикуса
-                     </li>
-                     <li class="modal__item">
-                       <svg class="modal__icon" width="12" height="12">
-                         <use href="./images/symbol-defs.svg#icon-bullet"></use>
-                       </svg>
-                       комплексное лечение скелетных аномалий
-                     </li>
-                   </ul>
-                 </div>
-                 <button class="button" type="button">
-                   Записаться на прием
-                 </button>
-               </div>
+                    </p>
+                  </div>
 
-               <button class="modal__close-btn" type="button" data-modal-close>
-                 <svg class="modal__close-btn-icon" width="32" height="32">
-                   <use href="./images/symbol-defs.svg#icon-close"></use>
-                 </svg>
-               </button>
-             </div>
+                  <ul class="maodal__info">
+                    <li class="modal__item">
+                      <svg class="modal__icon" width="12" height="12">
+                        <use href="./images/symbol-defs.svg#icon-bullet"></use>
+                      </svg>
+                      лечение нарушений прикуса, а также зубного ряда
+                    </li>
+                    <li class="modal__item">
+                      <svg class="modal__icon" width="12" height="12">
+                        <use href="./images/symbol-defs.svg#icon-bullet"></use>
+                      </svg>
+                      лечение с использованием брекет-систем
+                    </li>
+                    <li class="modal__item">
+                      <svg class="modal__icon" width="12" height="12">
+                        <use href="./images/symbol-defs.svg#icon-bullet"></use>
+                      </svg>
+                      патология зубных рядов, прикуса
+                    </li>
+                    <li class="modal__item">
+                      <svg class="modal__icon" width="12" height="12">
+                        <use href="./images/symbol-defs.svg#icon-bullet"></use>
+                      </svg>
+                      комплексное лечение скелетных аномалий
+                    </li>
+                  </ul>
+                </div>
+                <button class="button" type="button">
+                  Записаться на прием
+                </button>
+              </div>
 
-           </div>
+              <button class="modal__close-btn" type="button" data-modal-close>
+                <svg class="modal__close-btn-icon" width="32" height="32">
+                  <use href="./images/symbol-defs.svg#icon-close"></use>
+                </svg>
+              </button>
+            </div>
 
-           <div id="modal-3" class="modal hidden" data-modal>
-             <div class="modal__window">
-               <img class="modal__img" src="images/team/ivanov-2.jpg" width="250" height="400"
-                 alt="Стоматолог-терапевт Сергей Иванов">
+          </div>
 
-               <div class="modal__content">
+          <div id="modal-3" class="modal hidden" data-modal>
+            <div class="modal__window">
+              <img class="modal__img" src="images/team/ivanov-2.jpg" width="250" height="400"
+                alt="Стоматолог-терапевт Сергей Иванов">
 
-                 <div class="modal__content-top">
-                   <h2 class="modal__title title">
-                     Сергей Иванов
-                   </h2>
-                   <div class="modal__subtitle">
-                     <p class="modal__subtitle-txt">
-                       Стоматолог-терапевт
-                     </p>
-                     <p class="modal__subtitle-txt">
-                       Врач высшей категории
-                     </p>
-                   </div>
+              <div class="modal__content">
 
-                   <ul class="maodal__info">
-                     <li class="modal__item">
-                       <svg class="modal__icon" width="12" height="12">
-                         <use href="./images/symbol-defs.svg#icon-bullet"></use>
-                       </svg>
-                       лечение нарушений прикуса, а также зубного ряда
-                     </li>
-                     <li class="modal__item">
-                       <svg class="modal__icon" width="12" height="12">
-                         <use href="./images/symbol-defs.svg#icon-bullet"></use>
-                       </svg>
-                       лечение с использованием брекет-систем
-                     </li>
-                     <li class="modal__item">
-                       <svg class="modal__icon" width="12" height="12">
-                         <use href="./images/symbol-defs.svg#icon-bullet"></use>
-                       </svg>
-                       патология зубных рядов, прикуса
-                     </li>
-                     <li class="modal__item">
-                       <svg class="modal__icon" width="12" height="12">
-                         <use href="./images/symbol-defs.svg#icon-bullet"></use>
-                       </svg>
-                       комплексное лечение скелетных аномалий
-                     </li>
-                   </ul>
-                 </div>
-                 <button class="button" type="button">
-                   Записаться на прием
-                 </button>
-               </div>
+                <div class="modal__content-top">
+                  <h2 class="modal__title title">
+                    Сергей Иванов
+                  </h2>
+                  <div class="modal__subtitle">
+                    <p class="modal__subtitle-txt">
+                      Стоматолог-терапевт
+                    </p>
+                    <p class="modal__subtitle-txt">
+                      Врач высшей категории
+                    </p>
+                  </div>
 
-               <button class="modal__close-btn" type="button" data-modal-close>
-                 <svg class="modal__close-btn-icon" width="32" height="32">
-                   <use href="./images/symbol-defs.svg#icon-close"></use>
-                 </svg>
-               </button>
-             </div>
+                  <ul class="maodal__info">
+                    <li class="modal__item">
+                      <svg class="modal__icon" width="12" height="12">
+                        <use href="./images/symbol-defs.svg#icon-bullet"></use>
+                      </svg>
+                      лечение нарушений прикуса, а также зубного ряда
+                    </li>
+                    <li class="modal__item">
+                      <svg class="modal__icon" width="12" height="12">
+                        <use href="./images/symbol-defs.svg#icon-bullet"></use>
+                      </svg>
+                      лечение с использованием брекет-систем
+                    </li>
+                    <li class="modal__item">
+                      <svg class="modal__icon" width="12" height="12">
+                        <use href="./images/symbol-defs.svg#icon-bullet"></use>
+                      </svg>
+                      патология зубных рядов, прикуса
+                    </li>
+                    <li class="modal__item">
+                      <svg class="modal__icon" width="12" height="12">
+                        <use href="./images/symbol-defs.svg#icon-bullet"></use>
+                      </svg>
+                      комплексное лечение скелетных аномалий
+                    </li>
+                  </ul>
+                </div>
+                <button class="button" type="button">
+                  Записаться на прием
+                </button>
+              </div>
 
-           </div>
+              <button class="modal__close-btn" type="button" data-modal-close>
+                <svg class="modal__close-btn-icon" width="32" height="32">
+                  <use href="./images/symbol-defs.svg#icon-close"></use>
+                </svg>
+              </button>
+            </div>
 
-           <div id="modal-4" class="modal hidden" data-modal>
-             <div class="modal__window">
-               <img class="modal__img" src="images/team/popova-2.jpg" width="250" height="400"
-                 alt="Стоматолог-терапевт Светлана Попова">
+          </div>
 
-               <div class="modal__content">
+          <div id="modal-4" class="modal hidden" data-modal>
+            <div class="modal__window">
+              <img class="modal__img" src="images/team/popova-2.jpg" width="250" height="400"
+                alt="Стоматолог-терапевт Светлана Попова">
 
-                 <div class="modal__content-top">
-                   <h2 class="modal__title title">
-                     Светлана Попова
-                   </h2>
-                   <div class="modal__subtitle">
-                     <p class="modal__subtitle-txt">
-                       Подростковый стоматолог-терапевт
-                     </p>
-                     <p class="modal__subtitle-txt">
-                       
-                     </p>
-                   </div>
+              <div class="modal__content">
 
-                   <ul class="maodal__info">
-                     <li class="modal__item">
-                       <svg class="modal__icon" width="12" height="12">
-                         <use href="./images/symbol-defs.svg#icon-bullet"></use>
-                       </svg>
-                       лечение нарушений прикуса, а также зубного ряда
-                     </li>
-                     <li class="modal__item">
-                       <svg class="modal__icon" width="12" height="12">
-                         <use href="./images/symbol-defs.svg#icon-bullet"></use>
-                       </svg>
-                       лечение с использованием брекет-систем
-                     </li>
-                     <li class="modal__item">
-                       <svg class="modal__icon" width="12" height="12">
-                         <use href="./images/symbol-defs.svg#icon-bullet"></use>
-                       </svg>
-                       патология зубных рядов, прикуса
-                     </li>
-                     <li class="modal__item">
-                       <svg class="modal__icon" width="12" height="12">
-                         <use href="./images/symbol-defs.svg#icon-bullet"></use>
-                       </svg>
-                       комплексное лечение скелетных аномалий
-                     </li>
-                   </ul>
-                 </div>
-                 <button class="button" type="button">
-                   Записаться на прием
-                 </button>
-               </div>
+                <div class="modal__content-top">
+                  <h2 class="modal__title title">
+                    Светлана Попова
+                  </h2>
+                  <div class="modal__subtitle">
+                    <p class="modal__subtitle-txt">
+                      Подростковый стоматолог-терапевт
+                    </p>
+                    <p class="modal__subtitle-txt">
 
-               <button class="modal__close-btn" type="button" data-modal-close>
-                 <svg class="modal__close-btn-icon" width="32" height="32">
-                   <use href="./images/symbol-defs.svg#icon-close"></use>
-                 </svg>
-               </button>
-             </div>
+                    </p>
+                  </div>
 
-           </div>
+                  <ul class="maodal__info">
+                    <li class="modal__item">
+                      <svg class="modal__icon" width="12" height="12">
+                        <use href="./images/symbol-defs.svg#icon-bullet"></use>
+                      </svg>
+                      лечение нарушений прикуса, а также зубного ряда
+                    </li>
+                    <li class="modal__item">
+                      <svg class="modal__icon" width="12" height="12">
+                        <use href="./images/symbol-defs.svg#icon-bullet"></use>
+                      </svg>
+                      лечение с использованием брекет-систем
+                    </li>
+                    <li class="modal__item">
+                      <svg class="modal__icon" width="12" height="12">
+                        <use href="./images/symbol-defs.svg#icon-bullet"></use>
+                      </svg>
+                      патология зубных рядов, прикуса
+                    </li>
+                    <li class="modal__item">
+                      <svg class="modal__icon" width="12" height="12">
+                        <use href="./images/symbol-defs.svg#icon-bullet"></use>
+                      </svg>
+                      комплексное лечение скелетных аномалий
+                    </li>
+                  </ul>
+                </div>
+                <button class="button" type="button">
+                  Записаться на прием
+                </button>
+              </div>
 
-           <div id="modal-5" class="modal hidden" data-modal>
-             <div class="modal__window">
-               <img class="modal__img" src="images/team/ermakova-2.jpg" width="250" height="400"
-                 alt="Стоматолог-терапевт Екатерина Ермакова">
+              <button class="modal__close-btn" type="button" data-modal-close>
+                <svg class="modal__close-btn-icon" width="32" height="32">
+                  <use href="./images/symbol-defs.svg#icon-close"></use>
+                </svg>
+              </button>
+            </div>
 
-               <div class="modal__content">
+          </div>
 
-                 <div class="modal__content-top">
-                   <h2 class="modal__title title">
-                     Екатерина Ермакова
-                   </h2>
-                   <div class="modal__subtitle">
-                     <p class="modal__subtitle-txt">
-                       Стоматолог-терапевт
-                     </p>
-                     <p class="modal__subtitle-txt">
-                       
-                     </p>
-                   </div>
+          <div id="modal-5" class="modal hidden" data-modal>
+            <div class="modal__window">
+              <img class="modal__img" src="images/team/ermakova-2.jpg" width="250" height="400"
+                alt="Стоматолог-терапевт Екатерина Ермакова">
 
-                   <ul class="maodal__info">
-                     <li class="modal__item">
-                       <svg class="modal__icon" width="12" height="12">
-                         <use href="./images/symbol-defs.svg#icon-bullet"></use>
-                       </svg>
-                       лечение нарушений прикуса, а также зубного ряда
-                     </li>
-                     <li class="modal__item">
-                       <svg class="modal__icon" width="12" height="12">
-                         <use href="./images/symbol-defs.svg#icon-bullet"></use>
-                       </svg>
-                       лечение с использованием брекет-систем
-                     </li>
-                     <li class="modal__item">
-                       <svg class="modal__icon" width="12" height="12">
-                         <use href="./images/symbol-defs.svg#icon-bullet"></use>
-                       </svg>
-                       патология зубных рядов, прикуса
-                     </li>
-                     <li class="modal__item">
-                       <svg class="modal__icon" width="12" height="12">
-                         <use href="./images/symbol-defs.svg#icon-bullet"></use>
-                       </svg>
-                       комплексное лечение скелетных аномалий
-                     </li>
-                   </ul>
-                 </div>
-                 <button class="button" type="button">
-                   Записаться на прием
-                 </button>
-               </div>
+              <div class="modal__content">
 
-               <button class="modal__close-btn" type="button" data-modal-close>
-                 <svg class="modal__close-btn-icon" width="32" height="32">
-                   <use href="./images/symbol-defs.svg#icon-close"></use>
-                 </svg>
-               </button>
-             </div>
+                <div class="modal__content-top">
+                  <h2 class="modal__title title">
+                    Екатерина Ермакова
+                  </h2>
+                  <div class="modal__subtitle">
+                    <p class="modal__subtitle-txt">
+                      Стоматолог-терапевт
+                    </p>
+                    <p class="modal__subtitle-txt">
 
-           </div>
+                    </p>
+                  </div>
 
-           <div id="modal-6" class="modal hidden" data-modal>
-             <div class="modal__window">
-               <img class="modal__img" src="images/team/savelev-2.jpg" width="250" height="400"
-                 alt="Стоматолог-хирург Сергей Савельев">
+                  <ul class="maodal__info">
+                    <li class="modal__item">
+                      <svg class="modal__icon" width="12" height="12">
+                        <use href="./images/symbol-defs.svg#icon-bullet"></use>
+                      </svg>
+                      лечение нарушений прикуса, а также зубного ряда
+                    </li>
+                    <li class="modal__item">
+                      <svg class="modal__icon" width="12" height="12">
+                        <use href="./images/symbol-defs.svg#icon-bullet"></use>
+                      </svg>
+                      лечение с использованием брекет-систем
+                    </li>
+                    <li class="modal__item">
+                      <svg class="modal__icon" width="12" height="12">
+                        <use href="./images/symbol-defs.svg#icon-bullet"></use>
+                      </svg>
+                      патология зубных рядов, прикуса
+                    </li>
+                    <li class="modal__item">
+                      <svg class="modal__icon" width="12" height="12">
+                        <use href="./images/symbol-defs.svg#icon-bullet"></use>
+                      </svg>
+                      комплексное лечение скелетных аномалий
+                    </li>
+                  </ul>
+                </div>
+                <button class="button" type="button">
+                  Записаться на прием
+                </button>
+              </div>
 
-               <div class="modal__content">
+              <button class="modal__close-btn" type="button" data-modal-close>
+                <svg class="modal__close-btn-icon" width="32" height="32">
+                  <use href="./images/symbol-defs.svg#icon-close"></use>
+                </svg>
+              </button>
+            </div>
 
-                 <div class="modal__content-top">
-                   <h2 class="modal__title title">
-                     Сергей Савельев
-                   </h2>
-                   <div class="modal__subtitle">
-                     <p class="modal__subtitle-txt">
-                       Стоматолог-хирург
-                     </p>
-                     <p class="modal__subtitle-txt">
-                       
-                     </p>
-                   </div>
+          </div>
 
-                   <ul class="maodal__info">
-                     <li class="modal__item">
-                       <svg class="modal__icon" width="12" height="12">
-                         <use href="./images/symbol-defs.svg#icon-bullet"></use>
-                       </svg>
-                       лечение нарушений прикуса, а также зубного ряда
-                     </li>
-                     <li class="modal__item">
-                       <svg class="modal__icon" width="12" height="12">
-                         <use href="./images/symbol-defs.svg#icon-bullet"></use>
-                       </svg>
-                       лечение с использованием брекет-систем
-                     </li>
-                     <li class="modal__item">
-                       <svg class="modal__icon" width="12" height="12">
-                         <use href="./images/symbol-defs.svg#icon-bullet"></use>
-                       </svg>
-                       патология зубных рядов, прикуса
-                     </li>
-                     <li class="modal__item">
-                       <svg class="modal__icon" width="12" height="12">
-                         <use href="./images/symbol-defs.svg#icon-bullet"></use>
-                       </svg>
-                       комплексное лечение скелетных аномалий
-                     </li>
-                   </ul>
-                 </div>
-                 <button class="button" type="button">
-                   Записаться на прием
-                 </button>
-               </div>
+          <div id="modal-6" class="modal hidden" data-modal>
+            <div class="modal__window">
+              <img class="modal__img" src="images/team/savelev-2.jpg" width="250" height="400"
+                alt="Стоматолог-хирург Сергей Савельев">
 
-               <button class="modal__close-btn" type="button" data-modal-close>
-                 <svg class="modal__close-btn-icon" width="32" height="32">
-                   <use href="./images/symbol-defs.svg#icon-close"></use>
-                 </svg>
-               </button>
-             </div>
+              <div class="modal__content">
 
-           </div>
-           
+                <div class="modal__content-top">
+                  <h2 class="modal__title title">
+                    Сергей Савельев
+                  </h2>
+                  <div class="modal__subtitle">
+                    <p class="modal__subtitle-txt">
+                      Стоматолог-хирург
+                    </p>
+                    <p class="modal__subtitle-txt">
 
+                    </p>
+                  </div>
 
-          
+                  <ul class="maodal__info">
+                    <li class="modal__item">
+                      <svg class="modal__icon" width="12" height="12">
+                        <use href="./images/symbol-defs.svg#icon-bullet"></use>
+                      </svg>
+                      лечение нарушений прикуса, а также зубного ряда
+                    </li>
+                    <li class="modal__item">
+                      <svg class="modal__icon" width="12" height="12">
+                        <use href="./images/symbol-defs.svg#icon-bullet"></use>
+                      </svg>
+                      лечение с использованием брекет-систем
+                    </li>
+                    <li class="modal__item">
+                      <svg class="modal__icon" width="12" height="12">
+                        <use href="./images/symbol-defs.svg#icon-bullet"></use>
+                      </svg>
+                      патология зубных рядов, прикуса
+                    </li>
+                    <li class="modal__item">
+                      <svg class="modal__icon" width="12" height="12">
+                        <use href="./images/symbol-defs.svg#icon-bullet"></use>
+                      </svg>
+                      комплексное лечение скелетных аномалий
+                    </li>
+                  </ul>
+                </div>
+                <button class="button" type="button">
+                  Записаться на прием
+                </button>
+              </div>
 
+              <button class="modal__close-btn" type="button" data-modal-close>
+                <svg class="modal__close-btn-icon" width="32" height="32">
+                  <use href="./images/symbol-defs.svg#icon-close"></use>
+                </svg>
+              </button>
+            </div>
 
-
-
+          </div>
         </div>
 
       </div>
@@ -1026,9 +1023,7 @@
           </div>
     </section>
 
-
-
-    <section class="contact" style="background-image: url('images/contact.jpg');">
+    <section class="contact" id="contact" style="background-image: url('images/contact.jpg');">
       <div class="container contact__container">
         <div class="contact__inner">
 
