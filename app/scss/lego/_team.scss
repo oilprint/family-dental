@@ -40,11 +40,16 @@
 
   &__item {
     display: flex;
-    flex-direction: column;
-
+    
     &:nth-child(1) {
       grid-column: 3;
     }
+  }
+
+  &__btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   &__img {
@@ -52,6 +57,7 @@
   }
 
   &__bottom {
+    width: 100%;
     flex-grow: 1;
     padding: 20px 10px 30px;
     text-align: center;

@@ -1,0 +1,103 @@
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba($black, 0.3);
+  
+  .hidden {
+    display: none;
+  }
+
+  &__window {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    max-width: 820px;
+    width: 100%;
+    padding: 40px;
+    background-color: $bg;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+  }
+
+  &__img {
+    object-fit: contain;
+    margin-right: 50px;
+  }
+
+  &__content {
+    max-width: 430px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    margin-bottom: 30px;
+    margin-right: 120px;
+    color: $black;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  &__icon {
+    margin-right: 10px;
+  }
+
+  &__close-btn {
+    position: absolute;
+    padding: 12px;
+    top: 10px;
+    right: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: border 0.4s,
+      background-color 0.4s;
+
+    &:focus {
+      border: 1px solid $secondary;
+    }
+
+    &:hover {
+      background-color: $bg-dark;
+
+      .modal__close-btn-icon {
+        fill: $secondary;
+      }
+    }
+
+    &:active {
+      background-color: $primary;
+
+      .modal__close-btn-icon {
+        fill: $light;
+      }
+    }
+  }
+
+  &__close-btn-icon {
+    fill: $grey;
+    transition: fill 0.4s;
+  }
+}
+
+.hidden {
+  display: none;
+}
