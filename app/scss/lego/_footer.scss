@@ -1,0 +1,149 @@
+.footer {
+  padding-top: 60px;
+  background-color: $secondary;
+  color: $light;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__info-top {
+    display: flex;
+    justify-content: space-between;
+    max-width: 670px;
+    width: 100%;
+  }
+
+  &__links {
+    margin-right: 60px;
+  }
+
+  &__logo {
+    margin-bottom: 30px;
+  }
+
+  &__mail {
+    font-style: normal;
+    margin-bottom: 30px;
+  }
+
+  &__mail-link {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    transition: fill 0.4s;
+
+    &:hover {
+      .footer__mail-icon {
+        fill: $accent;
+      }
+    }
+
+    &:active {
+      .footer__mail-icon {
+        fill: $primary;
+      }
+    }
+  }
+
+  &__mail-icon {
+    fill: $light;
+    margin-right: 12px;
+  }
+
+  &__contact {
+    padding-top: 36px;
+    font-style: normal;
+  }
+
+  &__phone {
+    margin-bottom: 40px;
+  }
+
+  &__phone-link {
+    font-size: 30px;
+  }
+
+  &__address {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  &__time:not(:last-child) {
+    margin-bottom: 6px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  &__link {
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.4s;
+
+    &:hover {
+      color: $accent;
+    }
+
+    &:active {
+      color: $primary;
+    }
+  }
+
+  &__map {
+    padding-top: 43px;
+  }
+
+  &__bottom {
+    padding: 40px 0 20px;
+    opacity: 0.5;
+    font-size: 14px;
+  }
+
+}
+
+.social {
+  display: flex;
+  
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: fill 0.4s;
+
+    &:hover {
+      .social__icon {
+        fill: $accent;
+      }
+    }
+
+    &:active {
+      .social__icon {
+        fill: $primary;
+      }
+    }
+  }
+
+  &__icon {
+    fill: $light;
+  }
+}
