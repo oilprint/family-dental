@@ -3,10 +3,6 @@
     height: 100%;
   }
 
-  html {
-    scroll-behavior: smooth;
-   }
-
   body {
     display: flex;
     flex-direction: column;
@@ -31,7 +27,7 @@
   }
 
   .section {
-    padding-top: 100px;
+    padding-top: 110px;
   }
 
   .sr-only {

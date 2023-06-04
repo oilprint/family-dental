@@ -1,6 +1,16 @@
 .header {
   padding: 20px 0;
   background-color: $light;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  .active {
+    color: $accent;
+    border-bottom: 1px solid $accent;
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -29,7 +39,7 @@
 
   &__link {
     padding: 5px 0;
-    transition: color 0.4s;
+    transition: color 0.3s;
 
     &:hover {
       color: $accent;
