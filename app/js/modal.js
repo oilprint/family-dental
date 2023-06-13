@@ -21,6 +21,6 @@ modal.addEventListener('click', function ( ) {
 });
 
 // запрещаем передавать клик внутри модальное окна родителю, чтобы при клике внутри модального окна окно не закрывалось
-modal.querySelector('.modal__window').addEventListener('click', function (e) {
+modal.querySelector('.modal').addEventListener('click', function (e) {
   e.stopPropagation();
 });
