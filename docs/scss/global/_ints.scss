@@ -1,0 +1,27 @@
+.logo {
+  display: block;
+}
+
+.button {
+  display: inline-block;
+  width: fit-content;
+  padding: 12px 46px;
+  letter-spacing: 0.1em;
+  border-radius: 4px;
+  color: $light;
+  background-color: $accent;
+  transition: background-color 0.4s, outline 0.4s;
+
+  &:hover {
+    background-color: $secondary;
+  }
+
+  &:focus {
+    outline: solid 1px $primary;
+    outline-offset: 4px;
+  }
+
+  &:active {
+    background-color: $primary;
+  }
+}

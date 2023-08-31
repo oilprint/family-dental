@@ -1,0 +1,164 @@
+.review {
+  padding-bottom: 100px;
+
+  &__container {
+    padding: 0;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    margin-left: 15px;
+  }
+
+  &__item {
+    text-align: center;
+    width: 370px;
+
+    height: 100%;
+    border: 1px solid $secondary;
+    padding: 30px 15px;
+  }
+
+  &__star {
+    margin: 0 auto 25px;
+  }
+
+  &__item-title {
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 500;
+    margin-bottom: 25px;
+    color: $secondary;
+  }
+
+  &__txt {
+    margin-bottom: 20px;
+    height: 90px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    line-clamp: 4;
+    box-orient: vertical;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__autor {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    color: $secondary;
+  }
+
+  &__time {
+    color: $grey;
+    font-weight: 300;
+    font-feature-settings: 'pnum'on,
+      'lnum'on;
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    order: 2;
+    margin-right: 20px;
+
+    li {
+      &:not(:last-child) {
+        padding-right: 16px;
+      }
+
+      button {
+        padding: 0;
+        border-color: transparent;
+        font-size: 0;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: $secondary;
+        transition: background-color 0.4s, outline-offset 1s;
+
+        &:focus {
+          outline: solid 2px $accent;
+          outline-offset: 5px;
+        }
+
+        &:hover {
+          background-color: $accent;
+          outline: solid 2px $accent;
+          outline-offset: 5px;
+        }
+
+        &:active {
+          background-color: $primary;
+        }
+      }
+
+      &.slick-active {
+        button {
+          border-color: $accent;
+          background-color: $accent;
+        }
+      }
+    }
+  }
+
+  .slick-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    background-color: $bg;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: outline 0.4s,
+      background-color 0.4s;
+    position: absolute;
+    top: 50%;
+
+    &__icon {
+      fill: $secondary;
+      width: 32px;
+      height: 32px;
+      transition: fill 0.4s;
+    }
+
+    &--prev {
+      left: 150px;
+      transform: translateY(-50%) rotate(180deg);
+      left: -70px;
+    }
+
+    &--next {
+      right: -70px;
+
+    }
+
+    &:focus {
+      outline: solid 1px $secondary;
+      outline-offset: 4px;
+    }
+
+    &:hover {
+      background-color: $secondary;
+
+      .slick-arrow__icon {
+        fill: $light;
+      }
+
+      &:active {
+        background-color: $primary;
+      }
+    }
+  }
+
+  .slick-slide {
+    margin: 0 15px;
+    margin-bottom: 20px;
+  }
+}

@@ -15,7 +15,7 @@
   }
 
   &__info {
-    margin-bottom: 60px;
+    margin-bottom: 20px;
   }
 
   &__txt:not(:last-child) {
@@ -44,19 +44,26 @@
     }
   }
 
-  &__card {
+  &__btn {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border: 1px solid rgba($secondary, 0);
-    cursor: pointer;
     transition: border-color 0.4s;
+
+    &:focus {
+      border: 1px solid $secondary;
+    }
 
     &:hover {
       border: 1px solid $secondary;
       .team__img {
         transform: scale(1.2);
       }
+    }
+
+    &:active {
+      border: 1px solid $accent;
     }
   }
 
