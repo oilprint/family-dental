@@ -1,10 +1,14 @@
 .header {
-  padding: 20px 0;
+  padding: 8px 0;
   background-color: $light;
   position: fixed;
   left: 0;
   right: 0;
   z-index: 100;
+
+  @include tablet {
+    padding: 20px 0;
+  }
 
   .active {
     color: $accent;
@@ -14,23 +18,33 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
-  
-  &__links {
+
+  &__nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-grow: 1;
-    margin-right: 90px;
+  }
+
+  &__logo {
+    width: 120px;
+    height: 100%;
+
+    @include tablet {
+      width: 190px;
+    }
   }
 
   &__menu {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 40px;
+    display: none;
     font-weight: 500;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+
+    @include minidesk {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &__item:not(:last-child) {
@@ -45,30 +59,90 @@
       color: $accent;
       border-bottom: 1px solid $accent;
     }
-    
+
     &:active {
       color: $secondary;
     }
   }
 
   &__info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
+    display: none;
     font-style: normal;
     color: $secondary;
     font-weight: 500;
-    font-feature-settings: 'pnum'on, 'lnum'on;
+    font-feature-settings: 'pnum'on,
+      'lnum'on;
+
+    @include minitablet {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: 20px;
+    }
+
+    @include minidesk {
+      margin: 0;
+    }
   }
 
   &__address {
+    display: none;
     font-weight: 500;
     margin-bottom: 9px;
+
+    @include minidesk {
+      display: block;
+    }
   }
 
   &__phone {
-    font-size: 32px;
+    display: none;
+    font-size: 20px;
     font-weight: 500;
+
+    @include minitablet {
+      display: block;
+    }
+
+    @include tablet {
+      font-size: 32px;
+    }
+
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+
+    @include minidesk {
+      display: none;
+    }
+
+    &:focus {
+      outline: solid 1px $secondary;
+    }
+
+    &:hover {
+      .header__icon {
+        fill: $accent;
+      }
+    }
+
+    &:active {
+      background-color: $bg-dark;
+
+      .header__icon {
+        fill: $primary;
+      }
+    }
+  }
+
+  &__icon {
+    fill: $primary;
   }
 }

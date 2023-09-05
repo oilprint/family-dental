@@ -1,5 +1,9 @@
 .logo {
   display: block;
+
+  &__img {
+    height: 100%;
+  }
 }
 
 .button {

@@ -1,8 +1,8 @@
 $(function () {
 
   $('.hero__inner').slick({
-    dots: true,
-    arrows: true,
+    dots: false,
+    arrows: false,
     fade: true,
     autoplay: true,
     autoplaySpeed: 1500,  
