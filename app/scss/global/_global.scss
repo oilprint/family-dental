@@ -27,7 +27,15 @@
   }
 
   .section {
-    padding-top: 110px;
+    padding-top: 50px;
+
+    @include tablet {
+      padding-top: 70px;
+    }
+
+    @include desktop {
+      padding-top: 110px;
+    }
   }
 
   .sr-only {
@@ -76,10 +84,14 @@
 
   .title {
     display: inline-block;
-    font-size: 50px;
+    font-size: 40px;
     text-transform: uppercase;
     color: $secondary;
     position: relative;
+
+    @include tablet {
+      font-size: 50px;
+    }
 
     &::after {
       content: "";
@@ -92,11 +104,3 @@
     }
 
   }
-
-  
-
-  
-
-
-
-  
