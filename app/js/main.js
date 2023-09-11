@@ -1,3 +1,5 @@
+
+console.log('text2'); 
 $(function () {
 
   $('.hero__inner').slick({
@@ -24,17 +26,40 @@ $(function () {
   $('.review__inner').slick({
   dots: true,
   infinite: false,
+  arrows: false,
   speed: 300,
+  autoplay: true,
+  autoplaySpeed: 1500,  
   slidesToShow: 3,
   slidesToScroll: 3,
-  prevArrow: '<button class="slick-arrow slick-arrow--prev" type="button"><span class="sr-only">Предыдущий слайд</span><svg class="slick-arrow__icon" width="32" height="32"><use xlink:href="./images/symbol-defs.svg#icon-chevron"></use></svg></button>',
-  nextArrow: '<button class="slick-arrow slick-arrow--next" type="button"><span class="sr-only">Следующий слайд</span><svg class="slick-arrow__icon" width="32" height="32"><use xlink:href="./images/symbol-defs.svg#icon-chevron"></use></svg></button>'
+  centerMode:true,
+  responsive: [
+    {
+      breakpoint: 1024, // - от какой ширины изменять настройки(1024 и ниже)
+      settings: {
+        // вносим изменения на ширине 1024 и ниже 
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 578, // брекпоинтов может быть сколько угодно
+      settings: {
+        dots: false,
+        centerMode:false,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+
 });
 
 
 const modalButtons = document.querySelectorAll('[data-modal-button]');
 const modalClosebuttons = document.querySelectorAll('[data-modal-close]');
 const allModals = document.querySelectorAll ('[data-modal]');
+const bodyLock = document.querySelector('body');
 
 // Кнопки открытия модалки
 modalButtons.forEach(function (item) {
@@ -44,10 +69,11 @@ modalButtons.forEach(function (item) {
     const modal = document.querySelector('#' + modalId);
     
     modal.classList.remove('hidden');
+    bodyLock.classList.add('lock');
 
     // Делаем так, чтобы внутри модалки коик не передавался выше родителю: находим внутри открываемой модалки блок modal__window и запрещаем ему передавать клики наверх (его родителю)
 
-    modal.querySelector('.modal__window').addEventListener('click', function (e) {
+    modal.querySelector('.modal').addEventListener('click', function (e) {
       e.stopPropagation();
     });
   });
@@ -60,6 +86,7 @@ modalClosebuttons.forEach(function (item) {
     const modal = this.closest('[data-modal]');
   
     modal.classList.add('hidden');
+    bodyLock.classList.remove('lock');
   });
 });
 
@@ -67,6 +94,7 @@ modalClosebuttons.forEach(function (item) {
 allModals.forEach(function (item) {
   item.addEventListener('click', function () {
     this.classList.add('hidden');
+    bodyLock.classList.remove('lock');
   });
 });
 

@@ -13,6 +13,10 @@
     line-height: 1.3;
     color: $primary;
     background-color: $light;
+
+     &.lock {
+       overflow-y: hidden;
+     }
   }
 
   main {
@@ -84,7 +88,7 @@
 
   .title {
     display: inline-block;
-    font-size: 40px;
+    font-size: 36px;
     text-transform: uppercase;
     color: $secondary;
     position: relative;

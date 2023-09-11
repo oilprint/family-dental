@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body id="body">
+<body>
   <header class="header">
     <div class="container">
       <div class="header__inner">
@@ -339,7 +339,6 @@
             </li>
 
             <li class="team__item">
-
               <div class="team__card" data-modal-button="modal-2">
                 <div class="team__img-box">
                   <img class="team__img" src="images/team/sergeeva.jpg" alt="Катерина Сергєєва Стоматолог-ортодонт"
@@ -445,7 +444,7 @@
                       </p>
                     </div>
 
-                    <ul class="maodal__info">
+                    <ul class="modal__info">
                       <li class="modal__item">
                         <svg class="modal__icon" width="12" height="12">
                           <use href="./images/symbol-defs.svg#icon-bullet"></use>
@@ -504,7 +503,7 @@
                       </p>
                     </div>
 
-                    <ul class="maodal__info">
+                    <ul class="modal__info">
                       <li class="modal__item">
                         <svg class="modal__icon" width="12" height="12">
                           <use href="./images/symbol-defs.svg#icon-bullet"></use>
@@ -571,7 +570,7 @@
                       </p>
                     </div>
 
-                    <ul class="maodal__info">
+                    <ul class="modal__info">
                       <li class="modal__item">
                         <svg class="modal__icon" width="12" height="12">
                           <use href="./images/symbol-defs.svg#icon-bullet"></use>
@@ -633,7 +632,7 @@
                       </p>
                     </div>
 
-                    <ul class="maodal__info">
+                    <ul class="modal__info">
                       <li class="modal__item">
                         <svg class="modal__icon" width="12" height="12">
                           <use href="./images/symbol-defs.svg#icon-bullet"></use>
@@ -695,7 +694,7 @@
                       </p>
                     </div>
 
-                    <ul class="maodal__info">
+                    <ul class="modal__info">
                       <li class="modal__item">
                         <svg class="modal__icon" width="12" height="12">
                           <use href="./images/symbol-defs.svg#icon-bullet"></use>
@@ -757,7 +756,7 @@
                       </p>
                     </div>
 
-                    <ul class="maodal__info">
+                    <ul class="modal__info">
                       <li class="modal__item">
                         <svg class="modal__icon" width="12" height="12">
                           <use href="./images/symbol-defs.svg#icon-bullet"></use>
@@ -803,7 +802,7 @@
       </div>
     </section>
 
-    <!-- <section class="review section">
+   <section class="review section">
       <div class="container review__container">
 
         <h2 class="title review__title">
@@ -812,7 +811,7 @@
 
         <div class="review__inner">
 
-          <div class="review__item">
+          <blockquote class="review__item">
             <div class="review__star" data-rateyo-rating="3"></div>
             <blockquote>
               <h3 class="review__item-title">
@@ -833,9 +832,9 @@
               </div>
             </blockquote>
 
-          </div>
+          </blockquote>
 
-          <div class="review__item">
+          <blockquote class="review__item">
             <div class="review__star" data-rateyo-rating="5"></div>
             <blockquote>
               <h3 class="review__item-title">
@@ -856,9 +855,9 @@
               </div>
             </blockquote>
 
-          </div>
+          </blockquote>
 
-          <div class="review__item">
+          <blockquote class="review__item">
 
             <div class="review__star" data-rateyo-rating="4"></div>
             <blockquote>
@@ -879,9 +878,9 @@
               </div>
             </blockquote>
 
-          </div>
+          </blockquote>
 
-          <div class="review__item">
+          <blockquote class="review__item">
 
             <div class="review__star" data-rateyo-rating="5"></div>
             <blockquote>
@@ -902,9 +901,9 @@
               </div>
             </blockquote>
 
-          </div>
+          </blockquote>
 
-          <div class="review__item">
+          <blockquote class="review__item">
 
             <div class="review__star" data-rateyo-rating="4"></div>
             <blockquote>
@@ -926,9 +925,9 @@
               </div>
             </blockquote>
 
-          </div>
+          </blockquote>
 
-          <div class="review__item">
+          <blockquote class="review__item">
 
             <div class="review__star" data-rateyo-rating="4"></div>
             <blockquote>
@@ -950,9 +949,9 @@
               </div>
             </blockquote>
 
-          </div>
+          </blockquote>
 
-          <div class="review__item">
+          <blockquote class="review__item">
 
             <div class="review__star" data-rateyo-rating="3"></div>
             <blockquote>
@@ -974,9 +973,9 @@
               </div>
             </blockquote>
 
-          </div>
+          </blockquote>
 
-          <div class="review__item">
+          <blockquote class="review__item">
 
             <div class="review__star" data-rateyo-rating="5"></div>
             <blockquote>
@@ -997,9 +996,9 @@
               </div>
             </blockquote>
 
-          </div>
+          </blockquote>
 
-          <div class="review__item">
+          <blockquote class="review__item">
 
             <div class="review__star" data-rateyo-rating="5"></div>
             <blockquote>
@@ -1021,7 +1020,7 @@
               </div>
             </blockquote>
 
-          </div>
+          </blockquote>
         </div>
       </div>
     </section>
@@ -1039,8 +1038,12 @@
             </p>
 
             <form class="form" action="#">
-              <input class="form__input" type="text" placeholder="Ваше ім'я" name="userName" required>
-              <input class="form__input" type="tel" placeholder="+38 (___) ___ __ __" name="userPhone" required>
+              <div class="form__inputs">
+                 <input class="form__input" type="text" placeholder="Ваше ім'я" name="userName" required>
+                 <input class="form__input" type="tel" placeholder="+38 (___) ___ __ __" name="userPhone" required>
+
+              </div>
+             
 
               <button class="button form__button">
                 Записатися</button>
@@ -1048,7 +1051,7 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
   </main>
 
