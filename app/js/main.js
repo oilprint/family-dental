@@ -1,6 +1,24 @@
 
-console.log('text2'); 
 $(function () {
+
+   //Mobile Menu
+    const burger = document.querySelector('.header__button');
+
+    const mobileMenu = document.querySelector('.mobile-menu'); 
+    const closeButton = document.querySelector('.mobile-menu__button');
+    const bodyLock = document.querySelector('body'); 
+
+    burger.addEventListener('click', () => {
+      mobileMenu.classList.add('mobile-menu--active'); 
+      bodyLock.classList.add('lock');
+    });
+
+    closeButton.addEventListener('click', () => {
+      mobileMenu.classList.remove('mobile-menu--active'); 
+      bodyLock.classList.remove('lock');
+    });
+    //Mobile Menu end
+
 
   $('.hero__inner').slick({
     dots: false,
@@ -59,7 +77,6 @@ $(function () {
 const modalButtons = document.querySelectorAll('[data-modal-button]');
 const modalClosebuttons = document.querySelectorAll('[data-modal-close]');
 const allModals = document.querySelectorAll ('[data-modal]');
-const bodyLock = document.querySelector('body');
 
 // Кнопки открытия модалки
 modalButtons.forEach(function (item) {
