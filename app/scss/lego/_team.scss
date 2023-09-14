@@ -4,10 +4,20 @@
   }
 
   &__content {
-    width: 49%;
-    position: absolute;
-    left: 0;
-    top: 0;
+    width: 100%;
+    margin-bottom: 30px;
+
+
+    @include tablet {
+      margin-bottom: 50px;
+    }
+
+    @include minidesk {
+      width: 49%;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
   }
 
   &__title {
@@ -15,7 +25,9 @@
   }
 
   &__info {
-    margin-bottom: 60px;
+    margin-bottom: 20px;
+
+
   }
 
   &__txt:not(:last-child) {
@@ -32,15 +44,33 @@
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 30px;
+
+    @include minitablet {
+      grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include minidesk {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 
   &__item {
     display: flex;
-    
+    margin: 0 auto;
+
     &:nth-child(1) {
-      grid-column: 3;
+
+      @include minidesk {
+        grid-column: 3;
+      }
+
     }
   }
 
@@ -54,6 +84,7 @@
 
     &:hover {
       border: 1px solid $secondary;
+
       .team__img {
         transform: scale(1.2);
       }

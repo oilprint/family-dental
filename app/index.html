@@ -18,15 +18,15 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body id="body">
+<body>
   <header class="header">
     <div class="container">
       <div class="header__inner">
-        <nav class="header__links">
-          <a class="logo focus" href="#body">
-            <img class="logo__img" src="images/logo.svg" width="190" height="78" alt="логотип клиники Фамили Дентал">
-          </a>
+        <a class="logo focus header__logo" href="#body">
+          <img class="logo__img" src="images/logo.svg" width="190" height="78" alt="логотип клиники Фамили Дентал">
+        </a>
 
+        <nav class="header__nav">
           <ul class="header__menu">
             <li class="header__item">
               <a class="header__link focus" href="#about">
@@ -59,8 +59,100 @@
             +38 (093) 047 52 32
           </a>
         </div>
+
+        <button class="header__button" type="button">
+          <span class="sr-only">
+            Відкрити меню
+          </span>
+          <svg class="header__icon" width="40" height="40">
+            <use href="./images/symbol-defs.svg#icon-burger"></use>
+          </svg>
+        </button>
+
       </div>
     </div>
+
+      <div class="mobile-menu">
+        <nav class="mobile-menu__menu">
+          <ul class="mobile-menu__list">
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link current" href="#">
+                Про нас
+              </a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="#">
+                Hаші лікарі
+              </a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="#">
+                Ціни
+              </a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="#">
+                Контакти
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="mobile-menu__bottom">
+          <ul class="mobile-menu__contact">
+            <li class="mobile-menu__contact-item">
+              <a class="mobile-menu__contact-link" href="tel:+380930475232">
+                +38 (093) 047 52 32
+              </a>
+            </li>
+            <li class="mobile-menu__contact-item">
+              <a class="mobile-menu__contact-link" href="mailto:dentalfamily@gmail.com">
+                dentalfamily@gmail.com
+              </a>
+            </li>
+          </ul>
+
+          <ul class="mobile-menu__social social">
+            <li class="social__item">
+              <a class="social__link focus" href="#">
+                <span class="sr-only">
+                  Перейти на сторінку Інстаграм
+                </span>
+                <svg class="social__icon" width="44" height="44">
+                  <use href="./images/symbol-defs.svg#icon-instag"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link focus" href="#">
+                <span class="sr-only">
+                  Перейти на сторінку Телеграм
+                </span>
+                <svg class="social__icon" width="44" height="44">
+                  <use href="./images/symbol-defs.svg#icon-telegram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link focus" href="#">
+                <span class="sr-only">
+                  Перейти на сторінку Фейсбук
+                </span>
+                <svg class="social__icon" width="44" height="44">
+                  <use href="./images/symbol-defs.svg#icon-fb"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <button class="mobile-menu__button modal-button" type="button">
+          <span class=" sr-only">Close menu</span>
+          <svg class="modal-button__icon" width="32" height="32">
+            <use href="./images/symbol-defs.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+
 
   </header>
 
@@ -71,7 +163,7 @@
 
     <section class="hero">
       <div class="hero__inner">
-        <div class="hero__item">записатись
+        <div class="hero__item">
           <div class="container">
             <div class="hero__item-inner">
               <div class="hero__content">
@@ -98,10 +190,11 @@
             <div class="hero__item-inner">
               <div class="hero__content">
                 <h2 class="hero__title">
-                  Корекція прикусу
+                  Корекція прикусу у дітей
                 </h2>
                 <p class="hero__txt">
-                  Виправлення прикусу та порушень у формуванні зубного ряду
+                  Створимо основу для здорової посмішки вашої дитини: професійна корекція прикусу для найкращого
+                  майбутнього!
                 </p>
                 <a class="hero__link button" href="#contact">
                   Записатися
@@ -120,7 +213,8 @@
                   Ми створюємо красиві посмішки
                 </h2>
                 <p class="hero__txt">
-                  Встановлення брекетів дітям
+                  Забезпечимо яскраву посмішку вашим дітям з комфортом та безпекою: встановлюємо брекети з найвищою
+                  якістю!
                 </p>
                 <a class="hero__link button" href="#contact">
                   Записатися
@@ -177,7 +271,7 @@
 
     <section class="about section" id="about">
       <div class="container">
-        <div class="about__inner" style="background-image: url('images/about-bg.jpg');">
+        <div class="about__inner" style="background-image: url('../images/about-bg.jpg');">
           <div class="about__content">
             <h2 class="title about__title">
               Про клініку
@@ -224,7 +318,7 @@
                 Терапія
               </h3>
               <p class="services__txt">
-                Лікування та профілактика захворювань молочних зубів
+                Лікування захворювань молочних зубів
               </p>
             </div>
           </li>
@@ -271,22 +365,24 @@
       </div>
     </section>
 
-    <section class="price section" id="price">
+     <section class="price section" id="price">
       <div class="container price__container">
-        <h2 class="price__title">
-          Послуги та ціни стоматології
-        </h2>
-        <p class="price__txt">
-          Повна вартість послуг розраховується після огляду лікаря та складання плану лікування. Нижче наведена
-          вартість найбільш популярних послуг у нашій клініці
-        </p>
-        <a class="button price__button" href="./files/23.pdf" target="_blank">
-          Переглянути прайс
-        </a>
+        <div class="price__inner">
+          <h2 class="price__title">
+            Послуги та ціни стоматології
+          </h2>
+          <p class="price__txt">
+            Повна вартість послуг розраховується після огляду лікаря та складання плану лікування. Нижче наведена
+            вартість найбільш популярних послуг у нашій клініці
+          </p>
+          <a class="button price__button" href="./files/23.pdf" target="_blank">
+            Переглянути прайс
+          </a>
+        </div>
       </div>
     </section>
 
-    <section class="team section" id="team">
+   <section class="team section" id="team">
       <div class="container">
         <div class="team__inner">
 
@@ -311,11 +407,10 @@
 
           <ul class="team__list">
             <li class="team__item">
-
               <div class="team__card" data-modal-button="modal-1">
                 <div class="team__img-box">
                   <img class="team__img" src="images/team/prohorov.jpg" alt="Сергей Прохоров Врач высшей категории"
-                    width="270" height="300">
+                    width="300" height="300">
                 </div>
                 <div class="team__bottom">
                   <h3 class="team__bottom-title">
@@ -329,11 +424,10 @@
             </li>
 
             <li class="team__item">
-
               <div class="team__card" data-modal-button="modal-2">
                 <div class="team__img-box">
                   <img class="team__img" src="images/team/sergeeva.jpg" alt="Катерина Сергєєва Стоматолог-ортодонт"
-                    width="270" height="300">
+                    width="300" height="300">
                 </div>
                 <div class="team__bottom">
                   <h3 class="team__bottom-title">
@@ -349,7 +443,7 @@
               <div class="team__card" data-modal-button="modal-3">
                 <div class="team__img-box">
                   <img class="team__img" src="images/team/ivanov.jpg" alt="Сергій Іванов Лікар вищої категорії"
-                    width="270" height="300">
+                    width="300" height="300">
                 </div>
                 <div class="team__bottom">
                   <h3 class="team__bottom-title">
@@ -380,7 +474,7 @@
               <div class="team__card" data-modal-button="modal-5">
                 <div class="team__img-box">
                   <img class="team__img" src="images/team/ermakova.jpg" alt="Катерина Єрмакова Стоматолог-терапевт"
-                    width="270" height="300">
+                    width="300" height="300">
                 </div>
                 <div class="team__bottom">
                   <h3 class="team__bottom-title">
@@ -435,7 +529,7 @@
                       </p>
                     </div>
 
-                    <ul class="maodal__info">
+                    <ul class="modal__info">
                       <li class="modal__item">
                         <svg class="modal__icon" width="12" height="12">
                           <use href="./images/symbol-defs.svg#icon-bullet"></use>
@@ -468,7 +562,7 @@
                 </div>
               </div>
 
-              <button class="modal__close-btn" type="button" data-modal-close>
+              <button class="modal__close-btn modal-button" type="button" data-modal-close>
                 <svg class="modal__close-btn-icon" width="32" height="32">
                   <use href="./images/symbol-defs.svg#icon-close"></use>
                 </svg>
@@ -494,7 +588,7 @@
                       </p>
                     </div>
 
-                    <ul class="maodal__info">
+                    <ul class="modal__info">
                       <li class="modal__item">
                         <svg class="modal__icon" width="12" height="12">
                           <use href="./images/symbol-defs.svg#icon-bullet"></use>
@@ -561,7 +655,7 @@
                       </p>
                     </div>
 
-                    <ul class="maodal__info">
+                    <ul class="modal__info">
                       <li class="modal__item">
                         <svg class="modal__icon" width="12" height="12">
                           <use href="./images/symbol-defs.svg#icon-bullet"></use>
@@ -623,7 +717,7 @@
                       </p>
                     </div>
 
-                    <ul class="maodal__info">
+                    <ul class="modal__info">
                       <li class="modal__item">
                         <svg class="modal__icon" width="12" height="12">
                           <use href="./images/symbol-defs.svg#icon-bullet"></use>
@@ -685,7 +779,7 @@
                       </p>
                     </div>
 
-                    <ul class="maodal__info">
+                    <ul class="modal__info">
                       <li class="modal__item">
                         <svg class="modal__icon" width="12" height="12">
                           <use href="./images/symbol-defs.svg#icon-bullet"></use>
@@ -747,7 +841,7 @@
                       </p>
                     </div>
 
-                    <ul class="maodal__info">
+                    <ul class="modal__info">
                       <li class="modal__item">
                         <svg class="modal__icon" width="12" height="12">
                           <use href="./images/symbol-defs.svg#icon-bullet"></use>
@@ -793,7 +887,7 @@
       </div>
     </section>
 
-    <section class="review section">
+   <section class="review section">
       <div class="container review__container">
 
         <h2 class="title review__title">
@@ -802,7 +896,7 @@
 
         <div class="review__inner">
 
-          <div class="review__item">
+          <blockquote class="review__item">
             <div class="review__star" data-rateyo-rating="3"></div>
             <blockquote>
               <h3 class="review__item-title">
@@ -823,9 +917,9 @@
               </div>
             </blockquote>
 
-          </div>
+          </blockquote>
 
-          <div class="review__item">
+          <blockquote class="review__item">
             <div class="review__star" data-rateyo-rating="5"></div>
             <blockquote>
               <h3 class="review__item-title">
@@ -846,9 +940,9 @@
               </div>
             </blockquote>
 
-          </div>
+          </blockquote>
 
-          <div class="review__item">
+          <blockquote class="review__item">
 
             <div class="review__star" data-rateyo-rating="4"></div>
             <blockquote>
@@ -869,9 +963,9 @@
               </div>
             </blockquote>
 
-          </div>
+          </blockquote>
 
-          <div class="review__item">
+          <blockquote class="review__item">
 
             <div class="review__star" data-rateyo-rating="5"></div>
             <blockquote>
@@ -892,9 +986,9 @@
               </div>
             </blockquote>
 
-          </div>
+          </blockquote>
 
-          <div class="review__item">
+          <blockquote class="review__item">
 
             <div class="review__star" data-rateyo-rating="4"></div>
             <blockquote>
@@ -916,9 +1010,9 @@
               </div>
             </blockquote>
 
-          </div>
+          </blockquote>
 
-          <div class="review__item">
+          <blockquote class="review__item">
 
             <div class="review__star" data-rateyo-rating="4"></div>
             <blockquote>
@@ -940,9 +1034,9 @@
               </div>
             </blockquote>
 
-          </div>
+          </blockquote>
 
-          <div class="review__item">
+          <blockquote class="review__item">
 
             <div class="review__star" data-rateyo-rating="3"></div>
             <blockquote>
@@ -964,9 +1058,9 @@
               </div>
             </blockquote>
 
-          </div>
+          </blockquote>
 
-          <div class="review__item">
+          <blockquote class="review__item">
 
             <div class="review__star" data-rateyo-rating="5"></div>
             <blockquote>
@@ -987,9 +1081,9 @@
               </div>
             </blockquote>
 
-          </div>
+          </blockquote>
 
-          <div class="review__item">
+          <blockquote class="review__item">
 
             <div class="review__star" data-rateyo-rating="5"></div>
             <blockquote>
@@ -1011,7 +1105,7 @@
               </div>
             </blockquote>
 
-          </div>
+          </blockquote>
         </div>
       </div>
     </section>
@@ -1029,8 +1123,12 @@
             </p>
 
             <form class="form" action="#">
-              <input class="form__input" type="text" placeholder="Ваше ім'я" name="userName" required>
-              <input class="form__input" type="tel" placeholder="+38 (___) ___ __ __" name="userPhone" required>
+              <div class="form__inputs">
+                 <input class="form__input" type="text" placeholder="Ваше ім'я" name="userName" required>
+                 <input class="form__input" type="tel" placeholder="+38 (___) ___ __ __" name="userPhone" required>
+
+              </div>
+             
 
               <button class="button form__button">
                 Записатися</button>
@@ -1149,12 +1247,11 @@
           </nav>
         </div>
         <div class="footer__map">
-          <iframe
+          <iframe class="footer__map-link"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21988.65179523083!2d30.757409843480513!3d46.456989214539746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c633e6ad664fd1%3A0x87511f4a6d45f8f7!2z0KTRgNCw0L3RhtGD0LfRjNC60LjQuSDQsdGD0LvRjNCy0LDRgCwgNTUsINCe0LTQtdGB0LAsINCe0LTQtdGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCA2NTAwMA!5e0!3m2!1sru!2sua!4v1684954007224!5m2!1sru!2sua"
             width="470" height="350" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-
       </div>
       <div class="footer__bottom">
         2021 ⓒ Всі права захищені
@@ -1162,11 +1259,6 @@
 
     </div>
   </footer>
-
-
-
-
-
 
 
   <script src="js/main.min.js"></script>

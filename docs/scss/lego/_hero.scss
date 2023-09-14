@@ -1,11 +1,16 @@
 .hero {
-  margin-top: 118px;
+  margin-top: 65px;
+
+  @include tablet {
+    margin-top: 118px;
+  }
 
   &__inner {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    background-color: $bg;
   }
 
   &__item {
@@ -13,136 +18,200 @@
     align-items: center;
     width: 100%;
     background-color: $bg;
-    margin-bottom: 20px;
+    padding-bottom: 30px;
+
+     @include tablet {
+      padding-bottom: 0;
+     }
   }
 
   &__item-inner {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin-right: -200px;
+
+    @include tablet {
+      flex-direction: row;
+    }
+
+    @include desktop {
+      margin-right: -40px;
+    }
   }
 
   &__content {
-    width: 639px;
+    order: 2;
+    width: 100%;
+
+    @include tablet {
+      order: -1;
+      width: 639px;
+    }
   }
 
   &__title {
-    font-size: 48px;
+    font-size: 28px;
     font-weight: 500;
     text-transform: uppercase;
     color: $secondary;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+
+    @include mobile {
+      font-size: 32px;
+    }
+
+    @include minidesk {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
   }
 
   &__title-first {
-    font-size: 65px;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 35px;
     line-height: 0.8;
+
+    @include mobile {
+      font-size: 40px;
+    }
+
+    @include minitablet {
+      font-size: 42px;
+    }
+
+    @include minidesk {
+      font-size: 65px;
+    }
   }
-  
+
   &__txt {
-    font-size: 30px;
-    margin-bottom: 30px;
+    font-size: 20px;
+    margin-bottom: 20px;
+
+    @include minidesk {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
   }
 
   &__image {
-    height: 60vh;
-    bottom: 10px;
-  }
-  .slick-slide {
-    order: 0;
-  }
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+    object-fit: contain;
 
-  .slick-arrow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 6px;
-    background-color: $bg;
-    border-radius: 50%;
-    transform: translateY(5px);
-    transition: outline 0.4s,
+    @include tablet {
+      margin-bottom: 0;
+    }
+
+    @include minidesk {
+      max-width: 530px;
+      width: 100%;
+
+    }
+  }
+}
+
+.slick-slide {
+  order: 0;
+  
+}
+
+.slick-arrow {
+  display: none;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  padding: 6px;
+  background-color: $bg;
+  border-radius: 50%;
+  transform: translateY(5px);
+  transition: outline 0.4s,
     background-color 0.4s;
 
-    &__icon {
-      fill: $secondary;
-      width: 32px;
-      height: 32px;
-      transition: fill 0.4s;
+
+  &__icon {
+    fill: $secondary;
+    width: 32px;
+    height: 32px;
+    transition: fill 0.4s;
+  }
+
+  &--prev {
+    left: 150px;
+    transform: translateY(5px) rotate(180deg);
+    order: 1;
+    margin-right: 20px;
+  }
+
+  &--next {
+    right: 150px;
+    order: 3;
+  }
+
+  &:focus {
+    outline: solid 1px $secondary;
+    outline-offset: 4px;
+  }
+
+  &:hover {
+    background-color: $secondary;
+
+    .slick-arrow__icon {
+      fill: $light;
     }
 
-    &--prev {
-      left: 150px;
-      transform: translateY(5px) rotate(180deg);
-      order: 1;
-      margin-right: 20px;
+    &:active {
+      background-color: $primary;
+    }
+  }
+}
+
+.slick-dots {
+  display: none;
+  // display: flex;
+  // justify-content: center;
+  order: 2;
+  margin-right: 20px;
+
+
+  li {
+    &:not(:last-child) {
+      padding-right: 16px;
     }
 
-    &--next {
-      right: 150px;
-      order: 3;
-    }
-
-    &:focus {
-      outline: solid 1px $secondary;
-      outline-offset: 4px;
-    }
-
-    &:hover {
+    button {
+      padding: 0;
+      border-color: transparent;
+      font-size: 0;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
       background-color: $secondary;
+      transition: background-color 0.4s, outline-offset 1s;
 
-      .slick-arrow__icon {
-        fill: $light;
+      &:focus {
+        outline: solid 2px $accent;
+        outline-offset: 5px;
+      }
+
+      &:hover {
+        background-color: $accent;
+        outline: solid 2px $accent;
+        outline-offset: 5px;
       }
 
       &:active {
         background-color: $primary;
       }
     }
-  }
 
-  .slick-dots {
-    display: flex;
-    justify-content: center;
-    order: 2;
-    margin-right: 20px;
-
-    li {
-      &:not(:last-child) {
-        padding-right: 16px;
-      }
-
+    &.slick-active {
       button {
-        padding: 0;
-        border-color: transparent;
-        font-size: 0;
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
-        background-color: $secondary;
-        transition: background-color 0.4s, outline-offset 1s;
-
-        &:focus {
-          outline: solid 2px $accent;
-          outline-offset: 5px;
-        }
-
-        &:hover {
-          background-color: $accent;
-          outline: solid 2px $accent;
-          outline-offset: 5px;
-        }
-
-        &:active {
-          background-color: $primary;
-        }
-      }
-
-      &.slick-active {
-        button {
-          border-color: $accent;
-          background-color: $accent;
-        }
+        border-color: $accent;
+        background-color: $accent;
       }
     }
   }

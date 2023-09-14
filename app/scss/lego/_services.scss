@@ -2,16 +2,30 @@
 
   &__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 20px;
+
+    @include minidesk {
+      gap: 30px;
+      justify-content: space-between;
+    }
   }
 
   &__item {
     display: flex;
     flex-direction: column;
-    width: calc((100% - 3 * 30px) / 4);
+    flex-wrap: wrap;
+    max-width: 256px;
+    width: 100%;
 
-    &:not(:last-child) {
-      margin-right: 30px;
+    @include minitablet {
+      max-width: 256px;
+    }
+
+    @include minidesk {
+      width: calc((100% - 3 * 30px) / 4);
     }
   }
 

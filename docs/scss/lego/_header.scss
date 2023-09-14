@@ -1,10 +1,14 @@
 .header {
-  padding: 20px 0;
+  padding: 8px 0;
   background-color: $light;
   position: fixed;
   left: 0;
   right: 0;
   z-index: 100;
+
+  @include tablet {
+    padding: 20px 0;
+  }
 
   .active {
     color: $accent;
@@ -14,23 +18,33 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
-  
-  &__links {
+
+  &__nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-grow: 1;
-    margin-right: 90px;
+  }
+
+  &__logo {
+    width: 120px;
+    height: 100%;
+
+    @include tablet {
+      width: 190px;
+    }
   }
 
   &__menu {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 40px;
+    display: none;
     font-weight: 500;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+
+    @include minidesk {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &__item:not(:last-child) {
@@ -45,30 +59,210 @@
       color: $accent;
       border-bottom: 1px solid $accent;
     }
-    
+
     &:active {
       color: $secondary;
     }
   }
 
   &__info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
+    display: none;
     font-style: normal;
     color: $secondary;
     font-weight: 500;
-    font-feature-settings: 'pnum'on, 'lnum'on;
+    font-feature-settings: 'pnum'on,
+      'lnum'on;
+
+    @include minitablet {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: 20px;
+    }
+
+    @include minidesk {
+      margin: 0;
+    }
   }
 
   &__address {
+    display: none;
     font-weight: 500;
     margin-bottom: 9px;
+
+    @include minidesk {
+      display: block;
+    }
   }
 
   &__phone {
-    font-size: 32px;
+    display: none;
+    font-size: 20px;
     font-weight: 500;
+
+    @include minitablet {
+      display: block;
+    }
+
+    @include tablet {
+      font-size: 32px;
+    }
+
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+
+    @include minidesk {
+      display: none;
+    }
+
+    &:focus {
+      outline: solid 1px $secondary;
+    }
+
+    &:hover {
+      .header__icon {
+        fill: $accent;
+      }
+    }
+
+    &:active {
+      background-color: $bg-dark;
+
+      .header__icon {
+        fill: $primary;
+      }
+    }
+  }
+
+  &__icon {
+    fill: $primary;
+  }
+}
+
+
+.mobile-menu {
+  position: absolute;
+  z-index: 120;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 20px;
+  background-color: $bg-dark;
+  transform: translateX(100%);
+  transition: transform 0.4s;
+
+  @include mobile {
+    padding: 60px 40px;
+  }
+
+  &--active {
+    transform: translateX(0);
+  }
+
+  &__link {
+    display: block;
+    padding: 10px 0;
+    font-size: 32px;
+    letter-spacing: 0.02em;
+    line-height: 1.3;
+    color: $primary;
+    transition: color 0.5s,
+      outline 0.4s;
+
+    &.current {
+      color: $accent;
+    }
+
+    &:focus {
+      outline: solid 1px $accent;
+      border-radius: 4px;
+    }
+
+    &:active {
+      color: rgba($primary, 0.5);
+    }
+  }
+
+  &__contact {
+    color: $accent;
+    margin-bottom: 30px;
+
+    @media (orientation: landscape) {
+      display: flex;
+      margin-bottom: 0;
+    }
+  }
+
+  &__contact-item {
+
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+
+  &__contact-link {
+    display: block;
+    padding: 10px 0;
+    font-size: 24px;
+    font-feature-settings: 'pnum'on,
+      'lnum'on;
+    color: $secondary;
+
+    &:focus {
+      outline: solid 1px $accent;
+      border-radius: 4px;
+    }
+
+    &:active {
+      color: $accent;
+    }
+  }
+
+  &__social {
+    .social__icon {
+      fill: $secondary;
+    }
+  }
+
+
+  &__button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    &:focus {
+      outline: solid 1px $primary;
+    }
+
+    &:active {
+      background-color: $primary;
+
+      .modal-button__icon {
+        fill: $light;
+      }
+    }
+
+    .modal-button__icon {
+      fill: $primary;
+    }
   }
 }

@@ -1,8 +1,28 @@
+
 $(function () {
 
+   //Mobile Menu
+    const burger = document.querySelector('.header__button');
+
+    const mobileMenu = document.querySelector('.mobile-menu'); 
+    const closeButton = document.querySelector('.mobile-menu__button');
+    const bodyLock = document.querySelector('body'); 
+
+    burger.addEventListener('click', () => {
+      mobileMenu.classList.add('mobile-menu--active'); 
+      bodyLock.classList.add('lock');
+    });
+
+    closeButton.addEventListener('click', () => {
+      mobileMenu.classList.remove('mobile-menu--active'); 
+      bodyLock.classList.remove('lock');
+    });
+    //Mobile Menu end
+
+
   $('.hero__inner').slick({
-    dots: true,
-    arrows: true,
+    dots: false,
+    arrows: false,
     fade: true,
     autoplay: true,
     autoplaySpeed: 1500,  
@@ -16,17 +36,41 @@ $(function () {
     normalFill: "#989AA1",
     ratedFill: "#F497AC",
     readOnly: true,
-    spacing: "4px"
+    spacing: "4px",
+    starSvg: '<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 0L9.8175 4.93691L15 5.73344L11.25 9.57413L12.135 15L7.5 12.4369L2.865 15L3.75 9.57413L0 5.73344L5.1825 4.93691L7.5 0Z"/></svg>',
+    
   });
 
   $('.review__inner').slick({
   dots: true,
   infinite: false,
+  arrows: false,
   speed: 300,
+  autoplay: true,
+  autoplaySpeed: 1500,  
   slidesToShow: 3,
   slidesToScroll: 3,
-  prevArrow: '<button class="slick-arrow slick-arrow--prev" type="button"><span class="sr-only">Предыдущий слайд</span><svg class="slick-arrow__icon" width="32" height="32"><use xlink:href="./images/symbol-defs.svg#icon-chevron"></use></svg></button>',
-  nextArrow: '<button class="slick-arrow slick-arrow--next" type="button"><span class="sr-only">Следующий слайд</span><svg class="slick-arrow__icon" width="32" height="32"><use xlink:href="./images/symbol-defs.svg#icon-chevron"></use></svg></button>'
+  centerMode:true,
+  responsive: [
+    {
+      breakpoint: 1024, // - от какой ширины изменять настройки(1024 и ниже)
+      settings: {
+        // вносим изменения на ширине 1024 и ниже 
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 578, // брекпоинтов может быть сколько угодно
+      settings: {
+        dots: false,
+        centerMode:false,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+
 });
 
 
@@ -42,10 +86,11 @@ modalButtons.forEach(function (item) {
     const modal = document.querySelector('#' + modalId);
     
     modal.classList.remove('hidden');
+    bodyLock.classList.add('lock');
 
     // Делаем так, чтобы внутри модалки коик не передавался выше родителю: находим внутри открываемой модалки блок modal__window и запрещаем ему передавать клики наверх (его родителю)
 
-    modal.querySelector('.modal__window').addEventListener('click', function (e) {
+    modal.querySelector('.modal').addEventListener('click', function (e) {
       e.stopPropagation();
     });
   });
@@ -58,6 +103,7 @@ modalClosebuttons.forEach(function (item) {
     const modal = this.closest('[data-modal]');
   
     modal.classList.add('hidden');
+    bodyLock.classList.remove('lock');
   });
 });
 
@@ -65,6 +111,7 @@ modalClosebuttons.forEach(function (item) {
 allModals.forEach(function (item) {
   item.addEventListener('click', function () {
     this.classList.add('hidden');
+    bodyLock.classList.remove('lock');
   });
 });
 
