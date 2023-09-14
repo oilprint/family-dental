@@ -1,0 +1,35 @@
+@mixin desktop {
+  @media (min-width: (1200px)) {
+    @content;
+  }
+}
+
+@mixin minidesk {
+  @media (min-width: (1024px)) {
+    @content;
+  }
+}
+
+// @mixin tablet-land {
+//   @media (max-width: 1024px)and (orientation: landscape) {
+//     @content;
+//   }
+// }
+
+@mixin tablet {
+  @media (min-width: (768px)) {
+    @content;
+  }
+}
+
+@mixin minitablet {
+  @media (min-width: (578px)) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (min-width: (375px)) {
+    @content;
+  }
+}

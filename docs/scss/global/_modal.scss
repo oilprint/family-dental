@@ -1,34 +1,70 @@
-
-.modal {
+.backdrop {
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   background-color: rgba($black, 0.6);
-  z-index: 20;
-  
-  .hidden {
-    display: none;
+  z-index: 100;
+  display: flex;
+  transition: opacity 0.4s;
+
+
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+
+    .modal {
+      transform: scale(0);
+    }
+  }
+}
+
+.modal {
+  margin: auto;
+  padding: 50px 30px 30px;
+  width: 95%;
+  transform: scale(1);
+  background-color: $bg;
+  overflow-y: scroll;
+  transition: transform 0.4s;
+
+
+  @include minitablet {
+    width: fit-content;
   }
 
-  &__window {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: fixed;
+  @include tablet {
+    max-width: 730px;
+    padding: 40px;
+
+  }
+
+  @include minidesk {
     max-width: 820px;
     width: 100%;
-    padding: 40px;
-    background-color: $bg;
-    display: flex;
-    justify-content: space-between;
-    z-index: 2;
   }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+
 
   &__img {
     object-fit: contain;
-    margin-right: 50px;
+    margin: 0 0 20px 0;
+
+    @include tablet {
+      margin: 0 50px 0 0;
+    }
+
   }
 
   &__content {
@@ -42,14 +78,25 @@
   &__title {
     font-size: 28px;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
+
+    @include tablet{
+      margin-bottom: 20px;
+    }
   }
 
   &__subtitle {
     font-size: 24px;
-    margin-bottom: 30px;
-    margin-right: 120px;
+    margin-bottom: 16px;
     color: $black;
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__info {
+    margin-bottom: 30px;
   }
 
   &__item:not(:last-child) {
@@ -70,7 +117,7 @@
     justify-content: space-between;
     align-items: center;
     transition: border 0.4s,
-    background-color 0.4s;
+      background-color 0.4s;
 
     &:focus {
       border: 1px solid $secondary;
@@ -97,8 +144,4 @@
     fill: $grey;
     transition: fill 0.4s;
   }
-}
-
-.hidden {
-  display: none;
 }

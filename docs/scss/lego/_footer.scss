@@ -1,32 +1,67 @@
 .footer {
-  padding-top: 60px;
+  padding-top: 30px;
   background-color: $secondary;
   color: $light;
+
+  @include minidesk {
+    padding-top: 60px;
+  }
 
   &__top {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+    align-items: space-between;
+
+    @include desktop {
+      flex-direction: row;
+    }
+
   }
 
   &__info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: flex-start;
+
+    @include minitablet {
+      align-items: center;
+    }
+
+
   }
 
   &__info-top {
     display: flex;
     justify-content: space-between;
-    max-width: 670px;
+    flex-direction: column;
     width: 100%;
+    margin-bottom: 30px;
+
+
+    @include minitablet {
+      flex-direction: row;
+      max-width: 670px;
+    }
   }
 
   &__links {
-    margin-right: 60px;
+    margin-right: 0;
+
+    @include tablet {
+      margin-right: 60px;
+    }
   }
 
   &__logo {
+    width: 220px;
     margin-bottom: 30px;
+
+    @include tablet {
+      width: 272px;
+    }
   }
 
   &__mail {
@@ -59,12 +94,20 @@
   }
 
   &__contact {
-    padding-top: 36px;
+    padding-top: 0;
     font-style: normal;
+
+    @include tablet {
+      padding-top: 36px;
+    }
   }
 
   &__phone {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
   }
 
   &__phone-link {
@@ -85,13 +128,26 @@
   &__list {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    @include minitablet {
+      flex-direction: row;
+      margin-bottom: 0;
+    }
   }
 
   &__item:not(:last-child) {
-    margin-right: 40px;
+    margin-bottom: 0;
+
+    @include minitablet {
+      margin-right: 40px;
+    }
   }
 
   &__link {
+    display: block;
+    padding: 10px 0;
     font-weight: 500;
     text-transform: uppercase;
     transition: color 0.4s;
@@ -106,44 +162,55 @@
   }
 
   &__map {
-    padding-top: 43px;
+    padding-top: 0;
+    width: 100%;
+
+    @include desktop {
+      max-width: 470px;
+      padding-top: 43px;
+    }
+
+  }
+
+  &__map-link {
+    width: 100%;
   }
 
   &__bottom {
-    padding: 40px 0 20px;
+    padding: 20px 0 20px;
     opacity: 0.5;
     font-size: 14px;
   }
-
-}
-
-.social {
-  display: flex;
-  
-  &__item:not(:last-child) {
-    margin-right: 30px;
+    
   }
 
-  &__link {
+  .social {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: fill 0.4s;
 
-    &:hover {
-      .social__icon {
-        fill: $accent;
+    &__item:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &__link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: fill 0.4s;
+
+      &:hover {
+        .social__icon {
+          fill: $accent;
+        }
+      }
+
+      &:active {
+        .social__icon {
+          fill: $primary;
+        }
       }
     }
 
-    &:active {
-      .social__icon {
-        fill: $primary;
-      }
+    &__icon {
+      fill: $light;
     }
   }
-
-  &__icon {
-    fill: $light;
-  }
-}

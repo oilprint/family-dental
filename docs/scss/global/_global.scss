@@ -13,6 +13,10 @@
     line-height: 1.3;
     color: $primary;
     background-color: $light;
+
+     &.lock {
+       overflow-y: hidden;
+     }
   }
 
   main {
@@ -27,7 +31,15 @@
   }
 
   .section {
-    padding-top: 110px;
+    padding-top: 50px;
+
+    @include tablet {
+      padding-top: 70px;
+    }
+
+    @include desktop {
+      padding-top: 110px;
+    }
   }
 
   .sr-only {
@@ -76,10 +88,14 @@
 
   .title {
     display: inline-block;
-    font-size: 50px;
+    font-size: 36px;
     text-transform: uppercase;
     color: $secondary;
     position: relative;
+
+    @include tablet {
+      font-size: 50px;
+    }
 
     &::after {
       content: "";
@@ -92,11 +108,3 @@
     }
 
   }
-
-  
-
-  
-
-
-
-  
