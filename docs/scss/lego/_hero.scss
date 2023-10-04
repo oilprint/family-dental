@@ -1,7 +1,7 @@
 .hero {
   margin-top: 65px;
 
-  @include tablet {
+  @media (min-width: (768px)) {
     margin-top: 118px;
   }
 
@@ -20,9 +20,9 @@
     background-color: $bg;
     padding-bottom: 30px;
 
-     @include tablet {
+    @media (min-width: (768px)) {
       padding-bottom: 0;
-     }
+    }
   }
 
   &__item-inner {
@@ -31,11 +31,11 @@
     justify-content: space-between;
     align-items: center;
 
-    @include tablet {
+    @media (min-width: (768px)) {
       flex-direction: row;
     }
 
-    @include desktop {
+    @media (min-width: (1200px)) {
       margin-right: -40px;
     }
   }
@@ -44,7 +44,7 @@
     order: 2;
     width: 100%;
 
-    @include tablet {
+    @media (min-width: (768px)) {
       order: -1;
       width: 639px;
     }
@@ -57,11 +57,11 @@
     color: $secondary;
     margin-bottom: 10px;
 
-    @include mobile {
+    @media (min-width: (375px)) {
       font-size: 32px;
     }
 
-    @include minidesk {
+    @media (min-width: (1024px)) {
       font-size: 42px;
       margin-bottom: 20px;
     }
@@ -73,7 +73,7 @@
     font-size: 35px;
     line-height: 0.8;
 
-    @include mobile {
+    @media (min-width: (375px)) {
       font-size: 40px;
     }
 
@@ -81,7 +81,7 @@
       font-size: 42px;
     }
 
-    @include minidesk {
+    @media (min-width: (1024px)) {
       font-size: 65px;
     }
   }
@@ -90,7 +90,7 @@
     font-size: 20px;
     margin-bottom: 20px;
 
-    @include minidesk {
+    @media (min-width: (1024px)) {
       font-size: 30px;
       margin-bottom: 30px;
     }
@@ -101,36 +101,32 @@
     width: 100%;
     margin-bottom: 20px;
     object-fit: contain;
+    height: 300px;
 
-    @include tablet {
+    @media (min-width: (768px)) {
       margin-bottom: 0;
+      height: 420px;
     }
 
-    @include minidesk {
+    @media (min-width: (1024px)) {
       max-width: 530px;
       width: 100%;
-
     }
   }
 }
 
 .slick-slide {
   order: 0;
-  
 }
 
 .slick-arrow {
   display: none;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
   padding: 6px;
   background-color: $bg;
   border-radius: 50%;
   transform: translateY(5px);
   transition: outline 0.4s,
     background-color 0.4s;
-
 
   &__icon {
     fill: $secondary;
@@ -171,11 +167,8 @@
 
 .slick-dots {
   display: none;
-  // display: flex;
-  // justify-content: center;
   order: 2;
   margin-right: 20px;
-
 
   li {
     &:not(:last-child) {

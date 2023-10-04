@@ -1,11 +1,10 @@
 .contact {
-
   background-color: $bg-dark;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
 
-  @include tablet {
+  @media (min-width: (768px)) {
     background-size: contain;
   }
 
@@ -22,7 +21,7 @@
     width: 100%;
     background-color: rgba($bg-dark, 0.9);
 
-    @include tablet {
+    @media (min-width: (768px)) {
       padding: 40px;
     }
 
@@ -32,7 +31,7 @@
     font-size: 36px;
     margin-bottom: 30px;
 
-    @include tablet {
+    @media (min-width: (768px)) {
       font-size: 46px;
     }
   }
@@ -40,7 +39,7 @@
   &__txt {
     margin-bottom: 20px;
 
-    @include tablet {
+    @media (min-width: (768px)) {
       margin-bottom: 40px;
     }
   }
@@ -52,7 +51,7 @@
   align-items: flex-end;
   flex-direction: column;
 
-  @include tablet {
+  @media (min-width: (768px)) {
     flex-direction: row;
   }
 
@@ -64,17 +63,16 @@
     margin-bottom: 20px;
     width: 100%;
 
-    @include minitablet {
+    @media (min-width: (578px)) {
       flex-direction: row;
       margin-bottom: 20px;
     }
 
-    @include tablet {
+    @media (min-width: (768px)) {
       margin-bottom: 0;
       margin-right: 20px;
     }
   }
-
 
   &__input {
     background-color: transparent;
@@ -91,7 +89,7 @@
     &:not(:last-child) {
       margin-bottom: 10px;
 
-      @include minitablet {
+      @media (min-width: (578px)) {
         margin-bottom: 0;
         margin-right: 20px;
       }
@@ -113,7 +111,6 @@
       &.form__input::placeholder {
         opacity: 0;
       }
-
     }
   }
 }

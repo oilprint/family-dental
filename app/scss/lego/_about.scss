@@ -1,44 +1,40 @@
 .about {
   &__inner {
-    
     background-repeat: no-repeat;
     background-size: 300px auto;
     background-position: center top;
 
-    @include tablet {
+    @media (min-width: (768px)) {
       display: flex;
       margin-top: 0;
-
       justify-content: flex-end;
       background-size: 49% auto;
       background-position: left top;
     }
-
   }
 
   &__content {
     padding-top: 340px;
     width: 100%;
 
-    @include tablet {
+    @media (min-width: (768px)) {
       padding-top: 0;
       width: 46%;
     }
 
-    @include minidesk {
+    @media (min-width: (1024px)) {
       padding-bottom: 100px;
     }
 
-    @include desktop {
+    @media (min-width: (1200px)) {
       padding-bottom: 200px;
     }
-
   }
 
   &__title {
     margin-bottom: 20px;
 
-    @include tablet {
+    @media (min-width: (768px)) {
       margin-bottom: 20px;
     }
   }
@@ -63,7 +59,7 @@
     &:not(:last-child) {
       margin-bottom: 10px;
 
-      @include tablet {
+      @media (min-width: (768px)) {
         margin-bottom: 20px;
       }
     }

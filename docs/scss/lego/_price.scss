@@ -4,7 +4,7 @@
     text-align: center;
     background-color: $secondary;
     
-    @include tablet {
+    @media (min-width: (768px)) {
       padding: 70px 15px;
     }
   }
@@ -21,7 +21,7 @@
     color: $light;
     margin-bottom: 10px;
 
-    @include tablet {
+    @media (min-width: (768px)) {
       font-size: 36px;
       margin-bottom: 20px;
     }
@@ -31,7 +31,7 @@
     color: $light;
     margin-bottom: 20px;
 
-    @include tablet {
+    @media (min-width: (768px)) {
       margin-bottom: 40px;
     }
   }

@@ -3,7 +3,7 @@
   background-color: $secondary;
   color: $light;
 
-  @include minidesk {
+  @media (min-width: (1024px)) {
     padding-top: 60px;
   }
 
@@ -13,7 +13,7 @@
     flex-direction: column;
     align-items: space-between;
 
-    @include desktop {
+    @media (min-width: (1200px)) {
       flex-direction: row;
     }
 
@@ -26,11 +26,9 @@
     margin-bottom: 20px;
     align-items: flex-start;
 
-    @include minitablet {
+    @media (min-width: (578px)) {
       align-items: center;
     }
-
-
   }
 
   &__info-top {
@@ -40,8 +38,7 @@
     width: 100%;
     margin-bottom: 30px;
 
-
-    @include minitablet {
+    @media (min-width: (768px)) {
       flex-direction: row;
       max-width: 670px;
     }
@@ -50,7 +47,7 @@
   &__links {
     margin-right: 0;
 
-    @include tablet {
+    @media (min-width: (768px)) {
       margin-right: 60px;
     }
   }
@@ -59,7 +56,7 @@
     width: 220px;
     margin-bottom: 30px;
 
-    @include tablet {
+    @media (min-width: (768px)) {
       width: 272px;
     }
   }
@@ -97,7 +94,7 @@
     padding-top: 0;
     font-style: normal;
 
-    @include tablet {
+    @media (min-width: (768px)) {
       padding-top: 36px;
     }
   }
@@ -105,7 +102,7 @@
   &__phone {
     margin-bottom: 20px;
 
-    @include tablet {
+    @media (min-width: (768px)) {
       margin-bottom: 40px;
     }
   }
@@ -131,7 +128,7 @@
     flex-direction: column;
     margin-bottom: 20px;
 
-    @include minitablet {
+    @media (min-width: (768px)) {
       flex-direction: row;
       margin-bottom: 0;
     }
@@ -140,7 +137,7 @@
   &__item:not(:last-child) {
     margin-bottom: 0;
 
-    @include minitablet {
+    @media (min-width: (768px)) {
       margin-right: 40px;
     }
   }
@@ -165,11 +162,10 @@
     padding-top: 0;
     width: 100%;
 
-    @include desktop {
+    @media (min-width: (768px)) {
       max-width: 470px;
       padding-top: 43px;
     }
-
   }
 
   &__map-link {
@@ -181,36 +177,35 @@
     opacity: 0.5;
     font-size: 14px;
   }
-    
+}
+
+.social {
+  display: flex;
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
   }
 
-  .social {
+  &__link {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: fill 0.4s;
 
-    &__item:not(:last-child) {
-      margin-right: 30px;
-    }
-
-    &__link {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: fill 0.4s;
-
-      &:hover {
-        .social__icon {
-          fill: $accent;
-        }
-      }
-
-      &:active {
-        .social__icon {
-          fill: $primary;
-        }
+    &:hover {
+      .social__icon {
+        fill: $accent;
       }
     }
 
-    &__icon {
-      fill: $light;
+    &:active {
+      .social__icon {
+        fill: $primary;
+      }
     }
   }
+
+  &__icon {
+    fill: $light;
+  }
+}

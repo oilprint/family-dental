@@ -7,7 +7,7 @@
     row-gap: 20px;
     column-gap: 20px;
 
-    @include minidesk {
+    @media (min-width: (1024px)) {
       gap: 30px;
       justify-content: space-between;
     }
@@ -24,7 +24,7 @@
       max-width: 256px;
     }
 
-    @include minidesk {
+    @media (min-width: (1024px)) {
       width: calc((100% - 3 * 30px) / 4);
     }
   }

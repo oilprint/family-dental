@@ -1,14 +1,14 @@
 .backdrop {
   position: fixed;
-  top: 0;
   left: 0;
-  bottom: 0;
-  right: 0;
-  background-color: rgba($black, 0.6);
-  z-index: 100;
+  top: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  transition: opacity 0.4s;
-
+  background-color: rgba($black, 0.3);
+  backdrop-filter: blur(1px);
+  transition: opacity 0.5s;
 
   &.hidden {
     opacity: 0;
@@ -21,29 +21,37 @@
 }
 
 .modal {
-  margin: auto;
-  padding: 50px 30px 30px;
-  width: 95%;
-  transform: scale(1);
-  background-color: $bg;
-  overflow-y: scroll;
-  transition: transform 0.4s;
+   position: relative;
+   max-width: 450px;
+   width: 90%;
+   padding: 60px 30px 30px;
+   background-color: $light;
+   border-radius: 6px;
+   box-shadow: 8px 8px 3px rgba(0, 0, 0, 0.12);
+   transform: scale(1);
+   overflow-y: scroll;
+   margin: 20px auto;
+   scroll-behavior: smooth;
+   transition: transform 0.5s;
 
+    @media (min-width: 768px) {
+      max-width: 730px;
+      margin: auto;
+      overflow-y: hidden;
+    }
 
-  @include minitablet {
-    width: fit-content;
-  }
+     @media (min-width: 568px) and (orientation: landscape) {
+       margin: 20px auto;
+       overflow-y: scroll;
+     }
 
-  @include tablet {
-    max-width: 730px;
-    padding: 40px;
-
-  }
-
-  @include minidesk {
-    max-width: 820px;
-    width: 100%;
-  }
+    @media (min-width: 1024px) {
+      margin: auto;
+      overflow-y: hidden;
+       max-width: 820px;
+       width: 100%;
+       overflow-y: hidden;
+    }
 
   &__inner {
     display: flex;
@@ -51,20 +59,19 @@
     justify-content: space-between;
     align-items: center;
 
-    @include tablet {
+    @media (min-width: (768px)) {
       flex-direction: row;
     }
   }
 
-
   &__img {
     object-fit: contain;
+    height: auto;
     margin: 0 0 20px 0;
 
-    @include tablet {
+    @media (min-width: (768px)) {
       margin: 0 50px 0 0;
     }
-
   }
 
   &__content {
@@ -80,7 +87,7 @@
     font-weight: 700;
     margin-bottom: 8px;
 
-    @include tablet{
+    @media (min-width: (768px)) {
       margin-bottom: 20px;
     }
   }
@@ -90,7 +97,7 @@
     margin-bottom: 16px;
     color: $black;
 
-    @include tablet {
+    @media (min-width: (768px)) {
       margin-bottom: 30px;
     }
   }
